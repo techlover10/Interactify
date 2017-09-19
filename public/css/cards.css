@@ -1,0 +1,50 @@
+/*
+Custom version of:
+https://github.com/pakastin/deck-of-cards/blob/master/example/example.css
+see licence: https://github.com/pakastin/deck-of-cards/blob/master/LICENSE
+*/
+
+.card {
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  background-color: #fff;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.15);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.15);
+  cursor: default;
+}
+.card:before,
+.card:after {
+  position: absolute;
+  font-size: 0.7rem;
+  text-align: center;
+  line-height: 0.7rem;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  white-space: pre-line;
+  width: 0.55rem;
+  letter-spacing: -0.1rem;
+}
+.card:before {
+  top: 0.15rem;
+  left: 0;
+}
+.card:after {
+  bottom: 0.1rem;
+  right: 0;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.card .face {
+  height: 100%;
+  background-position: 50% 50%;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+

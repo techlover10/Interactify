@@ -1,0 +1,28 @@
+{
+  "name": "second_deal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "*",
+    "path": "*",
+    "socket.io": "*",
+    "ejs": "*",
+    "nodemon": "*",
+    "http": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aliu139/secondDeal.git"
+  },
+  "author": "Austin Liu (aliu139)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aliu139/secondDeal/issues"
+  },
+  "homepage": "https://github.com/aliu139/secondDeal#readme"
+}
