@@ -11,7 +11,7 @@ function addCard() {
 
     document.getElementById("touchHandler").innerHTML +=
         `<div class="item">
-            <div id="${card.id}" class="card cardH">
+            <div id="${card.id}" class="card cardH advertisement">
                 <div class="face"/>
             </div>
         </div>`;

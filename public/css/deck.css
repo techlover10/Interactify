@@ -73,11 +73,11 @@
 }
 
 .cardH.moveBot {
-    transform: translateY(200%); 
+    transform: translateY(300%) scale(2,2); 
     transition: all .40s ease-in-out;
 }
 
 .cardH.moveTop {
-    transform: translateY(-200%); 
+    transform: translateY(-300%) scale(0.5, 0.5); 
     transition: all .40s ease-in-out;
 }
