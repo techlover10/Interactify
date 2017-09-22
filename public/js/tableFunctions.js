@@ -1,17 +1,7 @@
 var idCounter = 0;
 
-function addCardToTable(id, angle, suit, rank) {
-    // inject card html to the page body
-    document.body.innerHTML +=
-        `<div class="path" style="transform: rotate(${angle}deg)">
-            <div id="${id}" class="card cardT">
-                <div class="face"/>
-            </div>
-        </div>`;
-}
-
 function removeCardFromTable(id, angle, suit, rank){
-    document.getElementById("card" + id).remove()
+    //document.getElementById("card" + id).remove()
 
 }
 
@@ -32,7 +22,7 @@ function phoneMoved(angle) {
 
 function getCard(card) {
     // remove card from table
-    var cardid = "card" + --idCounter;
+    var cardid = "sprite";
     console.log("getCard called, removing " + cardid);
     if (card.isCard) {
     }
@@ -41,7 +31,7 @@ function getCard(card) {
     setTimeout(function () {
         var cardElement = document.getElementById(cardid);
         // add 'thrown' class to start animation
-        $("#"+cardid).removeClass("thrown");
+        $("#sprite").removeClass("thrown");
         cardElement.className += " taken";
         // set thrown strength
         console.log("animating with " + "transform: translateY("+ (300) + "vh) scale(1)");
@@ -59,23 +49,16 @@ function getCard(card) {
 function throwCard(card) {
     // add card to table
     console.log("throwCard called")
-    var cardid = "card" + idCounter++;
-    if (card.isCard) {
-        addCardToTable(cardid, card.angle, card.suit, card.rank);
-    }
-    else {
-        addImageToTable(cardid, card.custImg, card.angle);
-    }
 
     // little hack to trigger the animation
     setTimeout(function () {
-        var cardElement = document.getElementById(cardid);
+        var cardElement = document.getElementById("sprite");
         // add 'thrown' class to start animation
         cardElement.className += " thrown";
         // set thrown strength
-        console.log("throwing with " + "transform: translateY(" + (100 - card.strength) + "vh) scale(1)");
-        cardElement.style = "transform: translateY(" + (100 - card.strength) + "vh) scale(1)";
-        allowMove(cardid)
+        console.log("throwing with " + "transform: translateX(" + (100 - card.strength) + "vw) scale(1)");
+        cardElement.style = "transform: translateX(" + (100 - card.strength) + "vw) scale(1)";
+        //allowMove(cardid)
     }, 100);
 
     //setTimeout(function(){

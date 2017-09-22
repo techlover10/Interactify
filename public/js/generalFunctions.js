@@ -43,7 +43,7 @@ function drawCard(url) {
 }
 
 function init(n) {
-    for (var i = 0; i < n; i++) {
+    for (var i = 0; i < 1; i++) {
         addCard();
     }
 }
@@ -64,7 +64,7 @@ function getCompassDirection() {
 }
 
 function calibrate() {
-    document.getElementById("touchHandler").className += " calibrated";
-    document.getElementById("waiting-for-calibration").remove();
-    compassDiff = compassDirection;
+    //document.getElementById("touchHandler").className += " calibrated";
+    //document.getElementById("waiting-for-calibration").remove();
+    //compassDiff = compassDirection;
 }

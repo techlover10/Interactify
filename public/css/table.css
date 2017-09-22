@@ -7,7 +7,7 @@
 
 .cardT {
     /* out of screen: translateY viewport height */
-    transform: translateY(100vh) scale(1.5);
+    transform: translateY(120vh) scale(1.5);
     box-shadow: 21px 21px 14px -9px rgba(0,0,0,1);
     margin: 0 auto; 
 }
@@ -27,9 +27,9 @@
 }
 
 .path {
-    height: 220vh;
+    height: 100vh;
     position: absolute;
-    bottom: -120vh;
+    bottom: 0px;
     left: 50%;
     margin-left: -1.9rem;
 }
@@ -48,7 +48,7 @@ html {
   height: 100%;
   margin: 0;
   padding: 0;
-  background: url("https://i.ytimg.com/vi/sNmLbhHnHTs/hqdefault.jpg") no-repeat center center fixed; 
+  /*background: url("https://i.ytimg.com/vi/sNmLbhHnHTs/hqdefault.jpg") no-repeat center center fixed; */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

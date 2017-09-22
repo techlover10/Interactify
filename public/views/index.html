@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title> SecondDeal </title>
+  <title> Interactify </title>
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
@@ -48,55 +48,70 @@
       </div>
     </div>
 
-    <div id="deck" v-show="client != null && client" v-cloak>
-      <div id="waiting-for-calibration" onclick="calibrate()">
-        <div class="section">
-          <span>Interactify</span>
+        <div id="deck" v-show="client != null && client" v-cloak>
+            <!--
+            <div id="waiting-for-calibration" onclick="calibrate()">
+                <div class="section">
+                    <span>Interactify</span>
+                </div>
+                <div class="section">
+                    <span>Dual-Screen Advertising Framework</span>
+                </div>
+            </div>
+            -->
+            <!--
+                <div id="uploadGroup">
+                <input id="customImageUpload" type="file" accept="image/*" onchange="picChange(event)" />
+                <button class="btn" id="upload" onclick="upload()"> Upload your photo </button>
+                </div>​
+            -->
+            <div id="touchHandler"></div>
         </div>
-        <div class="section">
-          <span>Dual-Screen Advertising Framework</span>
-        </div>
-      </div>
-      <!--
-      <div id="uploadGroup">
-        <input id="customImageUpload" type="file" accept="image/*" onchange="picChange(event)" />
-        <button class="btn" id="upload" onclick="upload()"> Upload your photo </button>
-      </div>​
-      -->
-      <div id="touchHandler"></div>
-    </div>
 
-    <div id="table" v-show="client != null && !client" v-cloak>
-      <!-- Pointer to indicate phone direction-->
-      <div id="phone-move" class="path"></div>
-      <!-- Waiting for phone to connect banner -->
-      <div id="waiting-for-device">
-        <div class="section">
-          <span>Scan with phone or go to:</span>
-          <span id="url"></span>
-          <div id="qr"></div>
+        <div class="fullscreen-bg">
+            <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
+                <source src="http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4" type="video/mp4">
+                    <source src="http://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_720p_stereo.ogg" type="video/ogg">
+            </video>
         </div>
-        <div id="placeholder"></div>
-        <div class="section">
-          <span>Waiting phone to connect ...</span>
+        <div id="table" v-show="client != null && !client" v-cloak>
+            <div class="path">
+                <div id="sprite" class="card cardT">
+                    <div class="adContent"></div>
+                </div>
+            </div>
+            <!-- Pointer to indicate phone direction-->
+            <!--
+                <div id="phone-move" class="path"></div>
+            -->
+            <!-- Waiting for phone to connect banner -->
+            <div id="waiting-for-device">
+                <div class="section">
+                    <span>Connect to host and join room: </span>
+                    <span id="url"></span>
+                    <div id="qr"></div>
+                </div>
+                <div id="placeholder"></div>
+                <div class="section">
+                    <span>Waiting phone to connect ...</span>
+                </div>
+            </div>
+            <div id="qr2"></div>
         </div>
-      </div>
-      <div id="qr2"></div>
-    </div>
   </div>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-    crossorigin="anonymous"></script>
+                                                                                    crossorigin="anonymous"></script>
   <script src="https://unpkg.com/vue"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
   <script src="https://rawgit.com/davidshimjs/qrcodejs/master/qrcode.min.js">
 
   </script>
   <script>
-                                                 var socket = io();
+var socket = io();
   </script>
   <script src="js/touchTrack.js"></script>
   <script src="js/generalFunctions.js"></script>
@@ -106,7 +121,7 @@
 
   <script src="https://cdn.rawgit.com/hammerjs/touchemulator/master/touch-emulator.js"></script>
   <script>
-    TouchEmulator();
+TouchEmulator();
   </script>
   <script src="https://hammerjs.github.io/dist/hammer.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>

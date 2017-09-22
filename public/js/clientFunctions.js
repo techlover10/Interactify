@@ -12,7 +12,7 @@ function addCard() {
 	document.getElementById("touchHandler").innerHTML +=
 		`<div class="item">
 		<div id="${card.id}" class="card cardH advertisement">
-		<div class="face"/>
+		<div class="adContent"/>
 		</div>
 		</div>`;
 }
@@ -90,19 +90,22 @@ function touchEnd(x, y, offsetX, offsetY, timeTaken) {
 	var min = Math.min(2000, pps);
 	var percentage = Math.trunc(min / 2000 * 100);
 	var cardElement = document.getElementById(card.id);
-        if (offsetY < 0){
-            removeCard(card.id, percentage, -1);
-    setTimeout(function() {
+    if (offsetY < 0){
+        removeCard(card.id, percentage, -1);
+        setTimeout(function() {
             cardElement.classList.remove("moveBot");
             cardElement.classList += " moveTop";
-    }, 1000);
-        } else {
-            removeCard(card.id, percentage, 1);
-    setTimeout(function() {
+        }, 1000);
+    } else {
+        removeCard(card.id, percentage, 1);
+        setTimeout(function() {
             cardElement.classList.remove("moveTop");
             cardElement.classList += " moveBot";
-    }, 1000);
-        }
+        }, 1000);
+        setTimeout(function(){
+           window.location.href = "https://www.cox.com/residential/home.html";
+        }, 1600);
+    }
 
 
 }
