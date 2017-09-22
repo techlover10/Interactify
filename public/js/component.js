@@ -23,12 +23,12 @@ window.main = new Vue({
                 this.clientLoop();
             }
             else {
-                var qr = new QRCode(document.getElementById("qr"));
-                qr.makeCode(this.requestedSID);
+                //var qr = new QRCode(document.getElementById("qr"));
+                //qr.makeCode(this.requestedSID);
 
-                var qr2 = new QRCode(document.getElementById("qr2"), {width: 100, height: 100});
-                qr2.makeCode(this.requestedSID);
-                $("#qr2").hide();
+                //var qr2 = new QRCode(document.getElementById("qr2"), {width: 100, height: 100});
+                //qr2.makeCode(this.requestedSID);
+                //$("#qr2").hide();
 
                 socket.emit('table-connect', this.requestedSID);
                 // and the URL
@@ -61,7 +61,8 @@ window.main = new Vue({
         tableLoop: function () {
             socket.on('phone-move', phoneMoved);
             socket.on('phone-connect', phoneConnected);
-            socket.on('phone-throw-card', throwCard);
+            socket.on('phone-throw-card', getCard);
+            socket.on('phone-get-card', getCard);
         }
     }
 })

@@ -12,6 +12,13 @@
     margin: 0 auto; 
 }
 
+.cardT.taken {
+    transition: all 1s ease-in;
+    /* back on screen: translateY to a lower level */
+    transform: translateY(-30vh) scale(1);
+    box-shadow: 8px 8px 14px -9px rgba(0,0,0,1);
+}
+
 .cardT.thrown {
     transition: all 1s ease-in;
     /* back on screen: translateY to a lower level */
@@ -41,7 +48,7 @@ html {
   height: 100%;
   margin: 0;
   padding: 0;
-  background: url("http://cdn.displays2go.com/images/enck7236bk-colorlg.jpg") no-repeat center center fixed; 
+  background: url("https://i.ytimg.com/vi/sNmLbhHnHTs/hqdefault.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

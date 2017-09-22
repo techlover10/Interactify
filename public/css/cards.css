@@ -10,8 +10,8 @@ see licence: https://github.com/pakastin/deck-of-cards/blob/master/LICENSE
   height: 4rem;
   /*background-color: #fff;*/
   -webkit-border-radius: 2rem;
-  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.15);
-  box-shadow: 0 1px 1px rgba(0,0,0,0.15);
+  /*-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.15);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.15);*/
   cursor: default;
   border-radius: 2rem;
   overflow:hidden;
@@ -43,7 +43,7 @@ see licence: https://github.com/pakastin/deck-of-cards/blob/master/LICENSE
 }
 .card .face {
   border: transparent;
-  background-image: url(/img/cardfaces/ad.jpg);
+  background-image: url("http://digitallanding.com/wp-content/uploads/2013/12/COX-Cable-logo.jpg");
   height: 100%;
   background-position: 50% 50%;
   -webkit-background-size: 100% 100%;
