@@ -103,7 +103,7 @@ function touchEnd(x, y, offsetX, offsetY, timeTaken) {
             cardElement.classList += " moveBot";
         }, 1000);
         setTimeout(function(){
-           window.location.href = "https://www.cox.com/residential/home.html";
+           window.location.href = "https://www.roku.com/index";
         }, 1600);
     }
 
