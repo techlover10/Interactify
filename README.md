@@ -1,6 +1,10 @@
 # Roku Interactive Advertising Framework 
-Code + inspiration from [secondDeal](https://github.com/aliu139/secondDeal) by
+
+## Open-Source Credits
+Starting code + inspiration from [secondDeal](https://github.com/aliu139/secondDeal) by
 by [Austin Liu](https://github.com/aliu139)
+
+Our goal was to use the second screen as an advertising platform in a non-intrusive way.  The idea of voluntarily "taking" an ad from the screen was inspired by this open-source project.  Much of the original server implementation for the prototype in this repository is based off of a heavily modified version of secondDeal.  Ultimately, as our prototype develops and becomes richer, much of the starting codebase will be stripped and repurposed in order to better serve the needs of our advertising platform.
 
 ## Introduction
 ### Background and Development
