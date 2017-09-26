@@ -1,5 +1,5 @@
-var isCompassAttached = false;
-var compassDiff = 0;
+//var isCompassAttached = false;
+//var compassDiff = 0;
 
 window.main = new Vue({
     el: '#main',
@@ -35,23 +35,11 @@ window.main = new Vue({
             var touchTrack = new TouchTrack();
             touchTrack.init(document.getElementById("touchHandler"), touchStart, touchMove, touchEnd);
 
-            // init compass data
-            if (!isCompassAttached) {
-                // if device has the touch orientation plugin
-                if (window.DeviceOrientationEvent) {
-                    // Listen for the deviceorientation event and handle the raw data
-                    window.addEventListener('deviceorientation', function (event) {
-                        compassDirection = (event.webkitCompassHeading) ? event.webkitCompassHeading : -event.alpha;
-                    });
-                }
-                isCompassAttached = true;
-            }
-
         },
         tableLoop: function () {
             socket.on('phone-connect', phoneConnected);
-            socket.on('phone-throw-card', throwCard);
-            socket.on('phone-get-card', getCard);
+            socket.on('phone-throw-sprite', throwCard);
+            socket.on('phone-get-sprite', getCard);
         }
     }
 })

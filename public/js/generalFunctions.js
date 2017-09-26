@@ -52,16 +52,16 @@ function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-function getCompassDirection() {
-    var val = ((compassDirection - compassDiff) + 360) % 360;
-    var direction = 0;
-    
-    if (val >= 0 && val < 180) {
-        return Math.min(val, 90);
-    } else {
-        return Math.max(val, 270);
-    }
-}
+//function getCompassDirection() {
+//    var val = ((compassDirection - compassDiff) + 360) % 360;
+//    var direction = 0;
+//    
+//    if (val >= 0 && val < 180) {
+//        return Math.min(val, 90);
+//    } else {
+//        return Math.max(val, 270);
+//    }
+//}
 
 function calibrate() {
     //document.getElementById("touchHandler").className += " calibrated";

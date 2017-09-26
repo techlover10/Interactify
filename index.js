@@ -7,8 +7,21 @@ const router = express.Router();
 
 let basePath = __dirname;
 
+// scaffolding for ad switcher endpoint
+var ads = ["roku", "cox", "blah"]
+var currentAd = "roku";
+var getCurrentAd = function(){
+    var ad = currentAd;
+    currentAd = ads[Math.floor(Math.random() * ads.length)];
+    return ad
+}
+
 router.get("/",function(req,res){
   res.render("index");
+});
+
+router.get("/currentAd", function(req, res){
+    res.send(getCurrentAd());
 });
 
 app.engine('html', require('ejs').renderFile);
@@ -47,22 +60,22 @@ io.on('connection', function(socket){
         }
     });
     // receives a throw card message from a phone
-    socket.on('phone-throw-card', function (data) {
+    socket.on('phone-throw-sprite', function (data) {
         console.log("card thrown")
         console.log(data)
         var tableSocket = tableSockets[data.tableId];
         if (tableSocket) {
-            tableSocket.emit('phone-throw-card', data);
+            tableSocket.emit('phone-throw-sprite', data);
         }
     });
 
     // receives a get card message from a phone
-    socket.on('phone-get-card', function (data) {
+    socket.on('phone-get-sprite', function (data) {
         console.log("card gotten")
         console.log(data)
         var tableSocket = tableSockets[data.tableId];
         if (tableSocket) {
-            tableSocket.emit('phone-get-card', data);
+            tableSocket.emit('phone-get-sprite', data);
         }
     });
 

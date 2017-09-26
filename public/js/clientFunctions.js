@@ -27,8 +27,6 @@ function removeCard(id, strength, direction) {
 	if (direction == -1){
         console.log("phone throw");
 		setTimeout(function () {
-			//document.getElementById(id).parentElement.remove();
-			//addCard();
 			var sentJSON = { 
 				tableId: window.main.$data.requestedSID, 
 				isCard: card.isCard, 
@@ -39,7 +37,7 @@ function removeCard(id, strength, direction) {
 				custImg: card.custImg 
 			};
 			console.log(sentJSON)
-			socket.emit('phone-throw-card', sentJSON);
+			socket.emit('phone-throw-sprite', sentJSON);
 		}, 500);
 	} else {
         console.log("phone get");
@@ -49,13 +47,13 @@ function removeCard(id, strength, direction) {
 				isCard: card.isCard, 
 				suit: card.suit, 
 				rank: card.rank, 
-				angle: getCompassDirection(), 
+				//angle: getCompassDirection(), 
 				strength: strength, 
 				custImg: card.custImg,
                 cID: idCounter--
 			};
 			console.log(sentJSON);
-			socket.emit('phone-get-card', sentJSON);
+			socket.emit('phone-get-sprite', sentJSON);
 		}, 500);
 
 	}
