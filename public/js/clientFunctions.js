@@ -9,7 +9,7 @@ function addCard() {
 	};
 	cards.push(card);
 
-    $.get("/currentAd", function (currentAd) {
+    $.get("/currentAdNoRefresh", function (currentAd) {
 	document.getElementById("touchHandler").innerHTML +=
 		`<div class="item">
 		<div id="${card.id}" class="card cardH ${currentAd}">

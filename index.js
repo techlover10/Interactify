@@ -1,5 +1,4 @@
 const express = require('express');
-const jquery = require('jquery');
 const path = require('path');
 const http = require('http');
 
@@ -23,6 +22,10 @@ router.get("/",function(req,res){
 
 router.get("/currentAd", function(req, res){
     res.send(getCurrentAd());
+});
+
+router.get("/currentAdNoRefresh", function(req, res){
+    res.send(currentAd);
 });
 
 app.engine('html', require('ejs').renderFile);
