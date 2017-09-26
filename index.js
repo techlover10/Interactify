@@ -1,4 +1,5 @@
-const express = require('express')
+const express = require('express');
+const jquery = require('jquery');
 const path = require('path');
 const http = require('http');
 
@@ -8,7 +9,7 @@ const router = express.Router();
 let basePath = __dirname;
 
 // scaffolding for ad switcher endpoint
-var ads = ["roku", "cox", "blah"]
+var ads = ["roku", "cox"]
 var currentAd = "roku";
 var getCurrentAd = function(){
     var ad = currentAd;

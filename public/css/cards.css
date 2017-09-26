@@ -6,7 +6,6 @@ see license: https://github.com/pakastin/deck-of-cards/blob/master/LICENSE
 
 .card {
   position: relative;
-  background-image: url("https://tse2.mm.bing.net/th?id=OIP.zfnNabSNWtOLAxdC673QAwEsCo&pid=15.1");
   background-position: 50% 50%;
   -webkit-background-size: 100% 100%;
   -moz-background-size: 100% 100%;
@@ -24,6 +23,15 @@ see license: https://github.com/pakastin/deck-of-cards/blob/master/LICENSE
   border-opacity: 0.38;
   overflow:hidden;
 }
+
+.roku {
+  background-image: url("https://tse2.mm.bing.net/th?id=OIP.zfnNabSNWtOLAxdC673QAwEsCo&pid=15.1");
+  }
+
+.cox {
+  background-image: url("http://www.familylifeinlv.com/wp-content/uploads/2012/02/Cox-Logo-2.png");
+  }
+
 .card:before,
 .card:after {
   position: absolute;

@@ -9,12 +9,14 @@ function addCard() {
 	};
 	cards.push(card);
 
+    $.get("/currentAd", function (currentAd) {
 	document.getElementById("touchHandler").innerHTML +=
 		`<div class="item">
-		<div id="${card.id}" class="card cardH advertisement">
+		<div id="${card.id}" class="card cardH ${currentAd}">
 		<div class="adContent"/>
 		</div>
 		</div>`;
+    });
 }
 
 function removeCard(id, strength, direction) {

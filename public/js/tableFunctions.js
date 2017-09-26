@@ -6,12 +6,14 @@ function removeCardFromTable(id, angle, suit, rank){
 }
 
 function addImageToTable(id, custImg, angle) {
+    $.get("/currentAd", function (currentAd){
     document.body.innerHTML +=
         `<div class="path" style="transform: rotate(${angle}deg)">
-            <div id="${id}" class="cardT custom">
+            <div id="${id}" class="cardT custom ${currentAd}">
                 <img class="customImg" src="` + custImg+`" >
             </div>
         </div>`;
+    });
 }
 
 function getCard(card) {
@@ -35,7 +37,10 @@ function getCard(card) {
     console.log("animation complete");
 
     setTimeout(function(){
-        $("#"+cardid).removeClass("taken");
+        $("#sprite").removeClass("taken");
+        $.get("/currentAd", function (currentAd){
+            $("#sprite").removeClass(currentAd);
+        });
         removeCardFromTable(cardid, card.angle, card.suit, card.rank);
     }, 1500);
 }
@@ -47,6 +52,9 @@ function throwCard(card) {
     // little hack to trigger the animation
     setTimeout(function () {
         var cardElement = document.getElementById("sprite");
+        $.get("/currentAd", function (currentAd){
+            $("#sprite").addClass(currentAd);
+        });
         // add 'thrown' class to start animation
         cardElement.className += " thrown";
         // set thrown strength
