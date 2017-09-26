@@ -14,12 +14,6 @@ function addImageToTable(id, custImg, angle) {
         </div>`;
 }
 
-function phoneMoved(angle) {
-    // change angle of the phone direction indicator
-    var path = document.querySelector("#phone-move.path");
-    path.style = `transform: rotate(${angle}deg)`;
-}
-
 function getCard(card) {
     // remove card from table
     var cardid = "sprite";

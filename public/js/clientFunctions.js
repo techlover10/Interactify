@@ -38,14 +38,12 @@ function removeCard(id, strength, direction) {
 				strength: strength, 
 				custImg: card.custImg 
 			};
-			//console.log(sentJSON)
-			//socket.emit('phone-throw-card', sentJSON);
+			console.log(sentJSON)
+			socket.emit('phone-throw-card', sentJSON);
 		}, 500);
 	} else {
         console.log("phone get");
 		setTimeout(function () {
-			//document.getElementById(id).parentElement.remove();
-			//addCard();
 			var sentJSON = { 
 				tableId: window.main.$data.requestedSID, 
 				isCard: card.isCard, 
@@ -57,7 +55,7 @@ function removeCard(id, strength, direction) {
                 cID: idCounter--
 			};
 			console.log(sentJSON);
-			socket.emit('phone-throw-card', sentJSON);
+			socket.emit('phone-get-card', sentJSON);
 		}, 500);
 
 	}
@@ -76,11 +74,6 @@ function touchMove(evt, x, y, offsetX, offsetY) {
 function touchEnd(x, y, offsetX, offsetY, timeTaken) {
 	console.log(offsetX)
 	console.log(offsetY)
-
-	// 10 pixels swipe up = min threshold
-	//if (offsetY < 0) {
-	//    return;
-	//}
 
 	// add class to animate
 	var card = cards[0];

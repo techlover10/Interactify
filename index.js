@@ -46,15 +46,6 @@ io.on('connection', function(socket){
             tableSocket.emit('phone-connect');
         }
     });
-
-    // receives a move from a phone
-    socket.on('phone-move', function (data) {
-        var tableSocket = tableSockets[data.tableId];
-        if (tableSocket) {
-            tableSocket.emit('phone-move', data.angle);
-        }
-    });
-
     // receives a throw card message from a phone
     socket.on('phone-throw-card', function (data) {
         console.log("card thrown")
@@ -62,6 +53,16 @@ io.on('connection', function(socket){
         var tableSocket = tableSockets[data.tableId];
         if (tableSocket) {
             tableSocket.emit('phone-throw-card', data);
+        }
+    });
+
+    // receives a get card message from a phone
+    socket.on('phone-get-card', function (data) {
+        console.log("card gotten")
+        console.log(data)
+        var tableSocket = tableSockets[data.tableId];
+        if (tableSocket) {
+            tableSocket.emit('phone-get-card', data);
         }
     });
 

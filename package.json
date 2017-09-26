@@ -1,5 +1,5 @@
 {
-  "name": "second_deal",
+  "name": "Interactify",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -17,12 +17,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aliu139/secondDeal.git"
+    "url": "git+https://github.com/techlover10/interactify"
   },
-  "author": "Austin Liu (aliu139)",
-  "license": "MIT",
+  "author": "Roku Product Challenge Team",
+  "license": "Apache 2.0",
   "bugs": {
-    "url": "https://github.com/aliu139/secondDeal/issues"
+    "url": "https://github.com/techlover10/interactify/issues"
   },
-  "homepage": "https://github.com/aliu139/secondDeal#readme"
+  "homepage": "https://github.com/techlover10/interactify#readme"
 }
