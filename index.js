@@ -9,7 +9,7 @@ const router = express.Router();
 let basePath = __dirname;
 
 // scaffolding for ad switcher endpoint
-var ads = ["roku", "cox"]
+var ads = ["roku", "cox", "netflix", "cornell", "hulu"]
 var currentAd = "roku";
 var getCurrentAd = function(){
     var ad = currentAd;
