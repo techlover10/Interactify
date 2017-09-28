@@ -5,7 +5,7 @@ window.main = new Vue({
     el: '#main',
     data: {
         client: null,
-        requestedSID: getRandomNumber(0, 10000)
+        requestedSID: 3000
     },
     methods: {
         setUser: function (isClient) {
