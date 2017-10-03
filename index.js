@@ -7,9 +7,13 @@ const router = express.Router();
 
 let basePath = __dirname;
 
+// ads loader
+var fs = require('fs');
+
 // scaffolding for ad switcher endpoint
-var ads = ["roku", "cox", "netflix", "cornell", "hulu"]
-var currentAd = "roku";
+//var ads = ["roku", "cox", "netflix", "cornell", "hulu"]
+var ads = JSON.parse(fs.readFileSync('public/ads/adsMaster.json', 'utf8'));
+var currentAd = ads[Math.floor(Math.random()*ads.length)];
 var getCurrentAd = function(){
     var ad = currentAd;
     currentAd = ads[Math.floor(Math.random() * ads.length)];
@@ -32,6 +36,7 @@ app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 app.set('views', path.join(__dirname + "/public/views"));
 app.use(express.static(__dirname + '/public'));
+
 
 app.use("/",router);
 

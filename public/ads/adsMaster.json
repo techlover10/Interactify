@@ -1,0 +1,14 @@
+[
+    {   "name": "roku",
+        "url": "https://www.roku.com/index",
+        "image": "https://tse2.mm.bing.net/th?id=OIP.zfnNabSNWtOLAxdC673QAwEsCo&pid=15.1"
+    },
+    {   "name": "cox",
+        "url": "https://www.cox.com",
+        "image": "http://www.familylifeinlv.com/wp-content/uploads/2012/02/Cox-Logo-2.png"
+    },
+    {   "name": "netflix",
+        "url": "https://www.netflix.com",
+        "image": "http://netdna.webdesignerdepot.com/uploads/2016/06/netflix.jpg"
+    }
+]

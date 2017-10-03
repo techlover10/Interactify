@@ -9,7 +9,7 @@ function addImageToTable(id, custImg, angle) {
     $.get("/currentAd", function (currentAd){
     document.body.innerHTML +=
         `<div class="path" style="transform: rotate(${angle}deg)">
-            <div id="${id}" class="cardT custom ${currentAd}">
+            <div id="${id}" class="cardT custom ${currentAd.name}">
                 <img class="customImg" src="` + custImg+`" >
             </div>
         </div>`;
@@ -53,7 +53,7 @@ function throwCard(card) {
     setTimeout(function () {
         var cardElement = document.getElementById("sprite");
         $.get("/currentAd", function (currentAd){
-            $("#sprite").addClass(currentAd);
+            $("#sprite").addClass(currentAd.name);
         });
         // add 'thrown' class to start animation
         cardElement.className += " thrown";

@@ -1,5 +1,6 @@
 var cards = [];
 var idCounter = 0;
+var currentClientAd = null;
 
 function addCard() {
 	// adds a new card to the end of the deck
@@ -10,9 +11,10 @@ function addCard() {
 	cards.push(card);
 
     $.get("/currentAdNoRefresh", function (currentAd) {
-	document.getElementById("touchHandler").innerHTML +=
+        currentClientAd = currentAd;
+        document.getElementById("touchHandler").innerHTML +=
 		`<div class="item">
-		<div id="${card.id}" class="card cardH ${currentAd}">
+		<div id="${card.id}" class="card cardH ${currentAd.name}">
 		<div class="adContent"/>
 		</div>
 		</div>`;
@@ -96,7 +98,7 @@ function touchEnd(x, y, offsetX, offsetY, timeTaken) {
             cardElement.classList += " moveBot";
         }, 1000);
         setTimeout(function(){
-           window.location.href = "https://www.roku.com/index";
+           window.location.href = currentClientAd.url;
         }, 1600);
     }
 
