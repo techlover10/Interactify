@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title> Interactify </title>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+                                                                                                            crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Proza+Libre:400,500i,700" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/table.css">
+        <link rel="stylesheet" href="css/deck.css">
+        <link rel="stylesheet" href="css/cards.css">
+    </head>
+
+    <body>
+        <div id="main">
+            <div class="fullscreen-bg">
+                <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
+                    <source src="http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4" type="video/mp4">
+                        <source src="http://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_720p_stereo.ogg" type="video/ogg">
+                </video>
+            </div>
+            <div id="table">
+                <div class="path">
+                    <div id="sprite" class="card cardT">
+                        <div class="adContent"></div>
+                    </div>
+                </div>
+                <!-- Waiting for phone to connect banner -->
+                <div id="waiting-for-device">
+                    <div class="section">
+                        <span>Connect a remote!</span>
+                    </div>
+                    <div id="placeholder"></div>
+                    <div class="section">
+                        <span>Waiting for remotes...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+                                                                                          crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/vue"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+        <script src="https://rawgit.com/davidshimjs/qrcodejs/master/qrcode.min.js"> </script>
+        <script>
+var socket = io();
+        </script>
+        <script src="js/touchTrack.js"></script>
+        <script src="js/generalFunctions.js"></script>
+        <script src="js/tableFunctions.js"></script>
+        <script src="js/tvComponent.js"></script>
+
+        <script src="https://cdn.rawgit.com/hammerjs/touchemulator/master/touch-emulator.js"></script>
+        <script>
+TouchEmulator();
+        </script>
+        <script src="https://hammerjs.github.io/dist/hammer.js"></script>
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+        <script src="https://cdn.rawgit.com/julianshapiro/velocity/master/velocity.min.js"></script>
+        <script src="js/move.js"></script>
+
+        <script src="https://rawgit.com/cirocosta/qcode-decoder/master/build/qcode-decoder.min.js"></script>
+    </body>
+
+</html>

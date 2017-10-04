@@ -13,19 +13,35 @@ var fs = require('fs');
 // scaffolding for ad switcher endpoint
 //var ads = ["roku", "cox", "netflix", "cornell", "hulu"]
 var ads = JSON.parse(fs.readFileSync('public/ads/adsMaster.json', 'utf8'));
-var currentAd = ads[Math.floor(Math.random()*ads.length)];
+var currentAd = null;
 var getCurrentAd = function(){
-    var ad = currentAd;
     currentAd = ads[Math.floor(Math.random() * ads.length)];
-    return ad
+    return currentAd;
 }
 
 router.get("/",function(req,res){
   res.render("index");
 });
 
+router.get("/tv",function(req,res){
+  res.render("tv");
+});
+
+router.get("/remote",function(req,res){
+  res.render("remote");
+});
+
+router.get("/admin",function(req,res){
+  res.render("admin");
+});
+
 router.get("/currentAd", function(req, res){
     res.send(getCurrentAd());
+});
+
+router.get("/currentAdTaken", function(req, res){
+    currentAd = null;
+    res.send("");
 });
 
 router.get("/currentAdNoRefresh", function(req, res){
@@ -68,15 +84,26 @@ io.on('connection', function(socket){
             tableSocket.emit('phone-connect');
         }
     });
+
     // receives a throw card message from a phone
     socket.on('phone-throw-sprite', function (data) {
-        console.log("card thrown")
-        console.log(data)
+        console.log("card thrown");
+        console.log(data);
         var tableSocket = tableSockets[data.tableId];
         if (tableSocket) {
             tableSocket.emit('phone-throw-sprite', data);
         }
     });
+
+    // sends an ad
+    socket.on('send-ad', function (tableId){
+        var tableSocket = tableSockets[tableId];
+        if (tableSocket) {
+            console.log("sending ad");
+            tableSocket.emit('send-ad');
+        }
+    });
+
 
     // receives a get card message from a phone
     socket.on('phone-get-sprite', function (data) {
@@ -94,3 +121,4 @@ io.on('connection', function(socket){
         }
     });
 });
+
