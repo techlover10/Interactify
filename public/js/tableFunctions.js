@@ -39,7 +39,10 @@ function getCard(card) {
     setTimeout(function(){
         $("#sprite").removeClass("taken");
         $.get("/currentAd", function (currentAd){
-            $("#sprite").removeClass(currentAd);
+            $("#sprite").css({
+                "background-image": "none"
+            });
+
         });
         removeCardFromTable(cardid, card.angle, card.suit, card.rank);
     }, 1500);
@@ -53,7 +56,9 @@ function throwCard(card) {
     setTimeout(function () {
         var cardElement = document.getElementById("sprite");
         $.get("/currentAd", function (currentAd){
-            $("#sprite").addClass(currentAd.name);
+            $("#sprite").css({
+                "background-image": "url(" + currentAd.image + ")"
+            });
         });
         // add 'thrown' class to start animation
         cardElement.className += " thrown";

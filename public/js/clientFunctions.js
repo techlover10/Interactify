@@ -14,7 +14,7 @@ function addCard() {
         currentClientAd = currentAd;
         document.getElementById("touchHandler").innerHTML +=
 		`<div class="item">
-		<div id="${card.id}" class="card cardH ${currentAd.name}">
+		<div id="${card.id}" class="card cardH" style="background-image: url(${currentAd.image})">
 		<div class="adContent"/>
 		</div>
 		</div>`;
