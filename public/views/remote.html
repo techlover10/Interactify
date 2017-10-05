@@ -21,10 +21,79 @@
 
     <body>
         <div id="main">
-            <div id="deck">
+            <div id="start">
+                <div id="ico">
+                    <img src="img/Roku_Logo.jpg"></img>
+                    <h1> Interactify Tech Demo</h1>
+
+                    <p> Connect to Interactify Server, and try an interactive ad!</p>
+                </div>
+
+                <div style="background-image:url(img/roku_company_logo.jpg); background-size:100%;width: 20%; padding-bottom:10%; left:0px; bottom:0px; position:absolute"></div>
+                <div style="background-image:url(img/ct-simple.png); background-size:100%;width: 20%; padding-bottom:8%; right:0px; bottom:0px; position:absolute"></div>
+
+                <div id="mainNum">
+                    <label> Room # </label>
+                    <input class="explodeBox" type="text" v-model="requestedSID" />
+                </div>
+
+                <section id="camera" style="display:none">
+                    <video autoplay id="camera-demo" poster="http://cirocosta.github.io/qcode-decoder/dist/assets/webcam.png"></video>
+                    <button id="scanQR" class="btn">Capture</button>             
+                </section>
+
+                <div id="mainButtons">
+                    <button type="button" class="btn btn-default explodeBox" v-on:click="setUser(true)"> Client </button>
+                    <button type="button" class="btn btn-default explodeBox" v-on:click="setUser(false)"> Server </button>
+                </div>
+            </div>
+
+            <div id="deck" v-show="client != null && client" v-cloak>
+                <!--
+                    <div id="waiting-for-calibration" onclick="calibrate()">
+                    <div class="section">
+                    <span>Interactify</span>
+                    </div>
+                    <div class="section">
+                    <span>Dual-Screen Advertising Framework</span>
+                    </div>
+                    </div>
+                -->
+                <!--
+                    <div id="uploadGroup">
+                    <input id="customImageUpload" type="file" accept="image/*" onchange="picChange(event)" />
+                    <button class="btn" id="upload" onclick="upload()"> Upload your photo </button>
+                    </div>​
+                -->
                 <div id="touchHandler"></div>
             </div>
 
+            <div class="fullscreen-bg">
+                <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
+                    <source src="http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4" type="video/mp4">
+                        <source src="http://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_720p_stereo.ogg" type="video/ogg">
+                </video>
+            </div>
+            <div id="table" v-show="client != null && !client" v-cloak>
+                <div class="path">
+                    <div id="sprite" class="card cardT">
+                        <div class="adContent"></div>
+                    </div>
+                </div>
+                <!-- Waiting for phone to connect banner -->
+                <div id="waiting-for-device">
+                    <div class="section">
+                        <span>Connect to host and join room: </span>
+                        <span id="url"></span>
+                        <div id="qr"></div>
+                    </div>
+                    <div id="placeholder"></div>
+                    <div class="section">
+                        <span>Waiting phone to connect ...</span>
+                    </div>
+                </div>
+                <div id="qr2"></div>
+            </div>
         </div>
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -42,6 +111,7 @@ var socket = io();
         </script>
         <script src="js/touchTrack.js"></script>
         <script src="js/generalFunctions.js"></script>
+        <script src="js/tableFunctions.js"></script>
         <script src="js/clientFunctions.js"></script>
         <script src="js/remoteComponent.js"></script>
 
