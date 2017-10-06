@@ -7,6 +7,12 @@ window.main = new Vue({
         client: null,
         requestedSID: 3000
     },
+    created: function(){
+        var self = this;
+        setTimeout(function () {
+            self.setUser(true);
+        }, 5); // hacky fix for touch not working
+    },
     methods: {
         setUser: function (isClient) {
             this.client = isClient;
