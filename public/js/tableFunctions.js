@@ -20,7 +20,7 @@ function getCard(card) {
         cardElement.className += " taken";
         // set thrown strength
         console.log("animating with " + "transform: translateY("+ (300) + "vh) scale(1)");
-        cardElement.style = "transform: translateY("+ (300) + "vh) scale(1)";
+        cardElement.style.transform = "translateY("+ (300) + "vh) scale(1)";
         allowMove(cardid)
     }, 5);
     console.log("animation complete");
@@ -28,9 +28,7 @@ function getCard(card) {
     setTimeout(function(){
         $("#sprite").removeClass("taken");
         $.get("/currentAdTaken", function (){
-            $("#sprite").css({
-                "background-image": "none"
-            });
+            //$("#sprite").css( "background-image", "none");
 
         });
         removeCardFromTable(cardid, card.angle, card.suit, card.rank);
@@ -45,14 +43,14 @@ function throwCard(card) {
         // little hack to trigger the animation
         setTimeout(function () {
             var cardElement = document.getElementById("sprite");
-            $("#sprite").css({
-                "background-image": "url(" + currentAd.image + ")"
-            });
             // add 'thrown' class to start animation
             cardElement.className += " thrown";
             // set thrown strength
             console.log("throwing with " + "transform: translateX(" + (100 - card.strength) + "vw) scale(1)");
-            cardElement.style = "transform: translateX(" + (100 - card.strength) + "vw) scale(1)";
+            cardElement.style.transform = "translateX(" + (100 - card.strength) + "vw) scale(1)";
+            console.log("adding css: " + currentAd.image);
+            cardElement.style.backgroundImage = "url(" + currentAd.image + ")";
+            console.log("added css: " +  "background-image", "url(" + currentAd.image + ")");
             //allowMove(cardid)
         }, 100);
     });

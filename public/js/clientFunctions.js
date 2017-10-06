@@ -3,52 +3,56 @@ var idCounter = 0;
 var currentClientAd = null;
 
 function addCard() {
-    $.get("/currentAdNoRefresh", function (currentAd) {
-        console.log("getting current ad");
-        if (currentAd){
-            console.log(currentAd);
-            // adds a new card to the end of the deck
-            var card = {
-                "id": idCounter++,
-                "isCard": true,
-            };
-            cards.push(card);
+    $.ajax({url: "/currentAdNoRefresh", 
+        success: function (currentAd) {
+            console.log("getting current ad");
+            if (currentAd){
+                console.log(currentAd);
+                // adds a new card to the end of the deck
+                var card = {
+                    "id": idCounter++,
+                    "isCard": true,
+                };
+                cards.push(card);
 
-            currentClientAd = currentAd;
-            document.getElementById("touchHandler").innerHTML +=
-                `<div class="item">
-                <div id="${card.id}" class="card cardH" style="background-image: url(${currentAd.image})">
-                <div class="adContent"/>
-                </div>
-                </div>`;
-        }
-    });
+                currentClientAd = currentAd;
+                document.getElementById("touchHandler").innerHTML +=
+                    `<div class="item">
+                    <div id="${card.id}" class="card cardH" style="background-image: url(${currentAd.image})">
+                    <div class="adContent"/>
+                    </div>
+                    </div>`;
+            }
+        },
+        async: false});
 }
 
 function removeCard(id, strength, direction) {
     console.log("remove card called");
-    if (cards.length === 0) {
-        console.log("no cards");
-        return;
-    }
+    //if (cards.length === 0) {
+    //    console.log("no cards");
+    //    return;
+    //}
     var card = cards[0];
     if (direction == -1){
-        console.log("phone throw");
-        setTimeout(function () {
-            var sentJSON = { 
-                tableId: window.main.$data.requestedSID, 
-                isCard: card.isCard, 
-                suit: card.suit, 
-                rank: card.rank, 
-                angle: getCompassDirection(), 
-                strength: strength, 
-                custImg: card.custImg 
-            };
-            console.log(sentJSON)
-            socket.emit('phone-throw-sprite', sentJSON);
-        }, 500);
+
+        // Placeholder code - right now, do nothing
+
+        //console.log("phone throw");
+        //setTimeout(function () {
+        //    var sentJSON = { 
+        //        tableId: window.main.$data.requestedSID, 
+        //        isCard: card.isCard, 
+        //        suit: card.suit, 
+        //        rank: card.rank, 
+        //        angle: getCompassDirection(), 
+        //        strength: strength, 
+        //        custImg: card.custImg 
+        //    };
+        //    console.log(sentJSON)
+        //    socket.emit('phone-throw-sprite', sentJSON);
+        //}, 500);
     } else {
-        addCard();
         console.log("phone get");
         setTimeout(function () {
             var sentJSON = { 
@@ -86,6 +90,8 @@ function touchEnd(x, y, offsetX, offsetY, timeTaken) {
     addCard();
     var card = cards[0];
     if (!card){
+        console.log(cards);
+        console.log("found no card");
         return
     }
     // calculate strength (2000+ pixels per second = 100% strength)
