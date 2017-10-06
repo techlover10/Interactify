@@ -14,10 +14,19 @@ var fs = require('fs');
 //var ads = ["roku", "cox", "netflix", "cornell", "hulu"]
 var ads = JSON.parse(fs.readFileSync('public/ads/adsMaster.json', 'utf8'));
 var currentAd = null;
-var getCurrentAd = function(){
-    currentAd = ads[Math.floor(Math.random() * ads.length)];
+var getCurrentAd = function(adSelected){
+    console.log(adSelected);
+    if (adSelected == ""){
+        currentAd = ads[Math.floor(Math.random() * ads.length)];
+    } else {
+        currentAd = adSelected;
+    }
     return currentAd;
 }
+
+router.get("/adsList", function(req, res){
+    res.send(ads);
+});
 
 router.get("/",function(req,res){
   res.render("index");
@@ -35,8 +44,8 @@ router.get("/admin",function(req,res){
   res.render("admin");
 });
 
-router.get("/currentAd", function(req, res){
-    res.send(getCurrentAd());
+router.post("/currentAd", function(req, res){
+    getCurrentAd(req.body);
 });
 
 router.get("/currentAdTaken", function(req, res){
