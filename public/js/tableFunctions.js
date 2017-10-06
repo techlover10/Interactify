@@ -19,19 +19,17 @@ function getCard(card) {
         $("#sprite").removeClass("thrown");
         cardElement.className += " taken";
         // set thrown strength
-        console.log("animating with " + "transform: translateY("+ (300) + "vh) scale(1)");
-        cardElement.style.transform = "translateY("+ (300) + "vh) scale(1)";
-        allowMove(cardid)
+        //console.log("animating with " + "transform: translateY("+ (300) + "vh) scale(1)");
+        //cardElement.style.transform = "translateY("+ (300) + "vh) scale(1)";
     }, 5);
     console.log("animation complete");
 
     setTimeout(function(){
         $("#sprite").removeClass("taken");
         $.get("/currentAdTaken", function (){
-            //$("#sprite").css( "background-image", "none");
+            $("#sprite").css( "background-image", "none");
 
         });
-        removeCardFromTable(cardid, card.angle, card.suit, card.rank);
     }, 1500);
 }
 
@@ -46,8 +44,6 @@ function throwCard(card) {
             // add 'thrown' class to start animation
             cardElement.className += " thrown";
             // set thrown strength
-            console.log("throwing with " + "transform: translateX(" + (100 - card.strength) + "vw) scale(1)");
-            cardElement.style.transform = "translateX(" + (100 - card.strength) + "vw) scale(1)";
             console.log("adding css: " + currentAd.image);
             cardElement.style.backgroundImage = "url(" + currentAd.image + ")";
             console.log("added css: " +  "background-image", "url(" + currentAd.image + ")");

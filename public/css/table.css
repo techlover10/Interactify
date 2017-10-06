@@ -15,7 +15,7 @@
 .cardT.taken {
     transition: all 1s ease-in;
     /* back on screen: translateY to a lower level */
-    transform: translateY(-30vh) scale(1);
+    transform: translateY(300vh) scale(1);
     box-shadow: 8px 8px 14px -9px rgba(0,0,0,1);
 }
 
