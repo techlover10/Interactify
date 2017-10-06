@@ -112,9 +112,15 @@ function touchEnd(x, y, offsetX, offsetY, timeTaken) {
             cardElement.classList.remove("moveTop");
             cardElement.classList += " moveBot";
         }, 1000);
-        setTimeout(function(){
-            window.location.href = currentClientAd.url;
-        }, 1600);
+        $.ajax({
+            url: '/currentAdTaken',
+            success: function(){
+                setTimeout(function(){
+                    window.location.href = currentClientAd.url;
+                }, 1600);
+            },
+            async: false
+        });
     }
 
 
