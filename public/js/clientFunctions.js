@@ -130,8 +130,10 @@ function touchEnd(x, y, offsetX, offsetY, timeTaken) {
             url: '/currentAdTaken',
             success: function(){
                 loadSite = setTimeout(function(){
-                    window.location.href = currentClientAd.url;
+                    window.open(currentClientAd.url, "_blank");
                     $('#loadingScreen').css("display", "none");
+                    cardElement.classList.remove("moveBot");
+                    cardElement.classList += " moveTop";
                 }, 5000);
             },
             async: false
