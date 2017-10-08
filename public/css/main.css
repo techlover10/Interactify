@@ -9,6 +9,10 @@
     background-color: white;
 }
 
+h1{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
 body{
     overflow: hidden;
     font-family: 'Oswald', sans-serif;
