@@ -33,14 +33,13 @@ function getCard(card) {
     }, 1500);
 }
 
-function throwCard(card) {
+function sendSprite(card) {
     // add card to table
-    console.log("throwCard called")
+    console.log("sendSprite called")
     $.get("/currentAdNoRefresh", function (currentAd){
         if (currentAd == null){
             return;
         }
-
         // little hack to trigger the animation
         setTimeout(function () {
             var cardElement = document.getElementById("sprite");
@@ -53,22 +52,18 @@ function throwCard(card) {
             //allowMove(cardid)
         }, 100);
     });
-
 }
 
 function sendAd(){
-    throwCard({"id": 0, "isCard": true});
+    sendSprite({"id": 0, "isCard": true});
 }
-
 
 function phoneConnected() {
     // remove banner when a phone connects
     console.log("phoneConnected")
-    //throwCard({"id": 0, "isCard": true});
 
     let el = document.getElementById("waiting-for-device")
     if(el){
         el.remove();
     }
-    //$("#qr2").show();
 }

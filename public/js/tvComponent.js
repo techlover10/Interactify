@@ -14,7 +14,7 @@ window.main = new Vue({
     methods: {
         tableLoop: function () {
             socket.on('phone-connect', phoneConnected);
-            socket.on('phone-throw-sprite', throwCard);
+            socket.on('phone-throw-sprite', sendSprite);
             socket.on('phone-get-sprite', getCard);
             socket.on('send-ad', sendAd);
         }
