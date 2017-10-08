@@ -1,4 +1,5 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const path = require('path');
 const http = require('http');
 
@@ -24,6 +25,9 @@ var getCurrentAd = function(adSelected){
     return currentAd;
 }
 
+// Use body parser for post requests
+app.use(bodyParser.json());
+
 router.get("/adsList", function(req, res){
     res.send(ads);
 });
@@ -44,8 +48,9 @@ router.get("/admin",function(req,res){
   res.render("admin");
 });
 
-router.post("/currentAd", function(req, res){
-    getCurrentAd(req.body);
+app.post("/currentAd", function(req, res){
+    console.log(req.body);
+    res.send("end");
 });
 
 router.get("/currentAdTaken", function(req, res){
