@@ -13,7 +13,8 @@
     "socket.io": "*",
     "ejs": "*",
     "nodemon": "*",
-    "http": "*"
+    "http": "*",
+    "body-parser": "*"
   },
   "repository": {
     "type": "git",

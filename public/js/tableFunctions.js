@@ -36,7 +36,10 @@ function getCard(card) {
 function throwCard(card) {
     // add card to table
     console.log("throwCard called")
-    $.get("/currentAd", function (currentAd){
+    $.get("/currentAdNoRefresh", function (currentAd){
+        if (currentAd == null){
+            return;
+        }
 
         // little hack to trigger the animation
         setTimeout(function () {

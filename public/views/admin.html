@@ -21,7 +21,15 @@
 
 <body>
   <div id="main">
+      <div style="padding: 30px">
+          <h1> Interactify Admin Panel </h1>
+      <select v-model="adSelected">
+          <option v-for="item in adsOptionsView">
+          {{ item }}
+          </option>
+      </select>
       <button type="button" class="btn btn-default explodeBox" v-on:click="sendAd()">Send an ad!</button>
+      </div>
   </div>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -37,15 +45,10 @@
   <script>
 var socket = io();
   </script>
-  <script src="js/touchTrack.js"></script>
   <script src="js/generalFunctions.js"></script>
   <script src="js/tableFunctions.js"></script>
   <script src="js/adminComponent.js"></script>
 
-  <script src="https://cdn.rawgit.com/hammerjs/touchemulator/master/touch-emulator.js"></script>
-  <script>
-TouchEmulator();
-  </script>
   <script src="https://hammerjs.github.io/dist/hammer.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
   <script src="https://cdn.rawgit.com/julianshapiro/velocity/master/velocity.min.js"></script>

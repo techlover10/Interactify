@@ -1,4 +1,5 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const path = require('path');
 const http = require('http');
 
@@ -14,10 +15,22 @@ var fs = require('fs');
 //var ads = ["roku", "cox", "netflix", "cornell", "hulu"]
 var ads = JSON.parse(fs.readFileSync('public/ads/adsMaster.json', 'utf8'));
 var currentAd = null;
-var getCurrentAd = function(){
-    currentAd = ads[Math.floor(Math.random() * ads.length)];
+var getCurrentAd = function(adSelected){
+    console.log(adSelected);
+    if (adSelected == ""){
+        currentAd = ads[Object.keys(ads)[Math.floor(Math.random() * ads.length)]];
+    } else {
+        currentAd = ads[adSelected];
+    }
     return currentAd;
 }
+
+// Use body parser for post requests
+app.use(bodyParser.json());
+
+router.get("/adsList", function(req, res){
+    res.send(ads);
+});
 
 router.get("/",function(req,res){
   res.render("index");
@@ -35,8 +48,11 @@ router.get("/admin",function(req,res){
   res.render("admin");
 });
 
-router.get("/currentAd", function(req, res){
-    res.send(getCurrentAd());
+app.post("/currentAd", function(req, res){
+    console.log(req.body);
+    console.log("Setting current ad to:" + req.body.id);
+    currentAd = req.body.id;
+    res.send("complete");
 });
 
 router.get("/currentAdTaken", function(req, res){
@@ -45,7 +61,9 @@ router.get("/currentAdTaken", function(req, res){
 });
 
 router.get("/currentAdNoRefresh", function(req, res){
-    res.send(currentAd);
+    console.log(currentAd);
+    console.log(ads);
+    res.send(ads[currentAd]);
 });
 
 app.engine('html', require('ejs').renderFile);
