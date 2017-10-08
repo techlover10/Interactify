@@ -16,7 +16,6 @@ var fs = require('fs');
 var ads = JSON.parse(fs.readFileSync('public/ads/adsMaster.json', 'utf8'));
 var currentAd = null;
 var getCurrentAd = function(adSelected){
-    console.log(adSelected);
     if (adSelected == ""){
         currentAd = ads[Object.keys(ads)[Math.floor(Math.random() * ads.length)]];
     } else {
@@ -49,8 +48,6 @@ router.get("/admin",function(req,res){
 });
 
 app.post("/currentAd", function(req, res){
-    console.log(req.body);
-    console.log("Setting current ad to:" + req.body.id);
     currentAd = req.body.id;
     res.send("complete");
 });
@@ -61,8 +58,6 @@ router.get("/currentAdTaken", function(req, res){
 });
 
 router.get("/currentAdNoRefresh", function(req, res){
-    console.log(currentAd);
-    console.log(ads);
     res.send(ads[currentAd]);
 });
 
@@ -105,8 +100,7 @@ io.on('connection', function(socket){
 
     // receives a throw card message from a phone
     socket.on('phone-throw-sprite', function (data) {
-        console.log("card thrown");
-        console.log(data);
+        console.log("sprite thrown");
         var tableSocket = tableSockets[data.tableId];
         if (tableSocket) {
             tableSocket.emit('phone-throw-sprite', data);
