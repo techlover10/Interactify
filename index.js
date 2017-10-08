@@ -18,9 +18,9 @@ var currentAd = null;
 var getCurrentAd = function(adSelected){
     console.log(adSelected);
     if (adSelected == ""){
-        currentAd = ads[Math.floor(Math.random() * ads.length)];
+        currentAd = ads[Object.keys(ads)[Math.floor(Math.random() * ads.length)]];
     } else {
-        currentAd = adSelected;
+        currentAd = ads[adSelected];
     }
     return currentAd;
 }
@@ -50,7 +50,9 @@ router.get("/admin",function(req,res){
 
 app.post("/currentAd", function(req, res){
     console.log(req.body);
-    res.send("end");
+    console.log("Setting current ad to:" + req.body.id);
+    currentAd = req.body.id;
+    res.send("complete");
 });
 
 router.get("/currentAdTaken", function(req, res){
@@ -59,7 +61,9 @@ router.get("/currentAdTaken", function(req, res){
 });
 
 router.get("/currentAdNoRefresh", function(req, res){
-    res.send(currentAd);
+    console.log(currentAd);
+    console.log(ads);
+    res.send(ads[currentAd]);
 });
 
 app.engine('html', require('ejs').renderFile);

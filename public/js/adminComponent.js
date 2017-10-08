@@ -6,7 +6,7 @@ window.main = new Vue({
     data: {
         client: false,
         requestedSID: 3000,
-        adsOptions: null,
+        adsOptionsView: null,
         adSelected: null
     },
     created: function () {
@@ -14,7 +14,7 @@ window.main = new Vue({
         $.ajax({
             url: '/adsList', 
             success: function(data){
-            self.adsOptions = data;
+                self.adsOptionsView = Object.keys(data);
             },
             ajax: false
         });
@@ -23,11 +23,12 @@ window.main = new Vue({
     methods: {
         sendAd: function () {
             var self = this;
+            console.log({"id": self.adSelected});
             $.ajax({
                 url: '/currentAd',
                 type: 'POST',
-                data: {"data": self.adSelected},
-                dataType: "application/json",
+                data: JSON.stringify({"id": self.adSelected}),
+                contentType: "application/json",
                 ajax: false
             });
             socket.emit('send-ad', this.requestedSID);

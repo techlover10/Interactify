@@ -24,8 +24,8 @@
       <div style="padding: 30px">
           <h1> Interactify Admin Panel </h1>
       <select v-model="adSelected">
-          <option v-for="item in adsOptions">
-          {{ item.name }}
+          <option v-for="item in adsOptionsView">
+          {{ item }}
           </option>
       </select>
       <button type="button" class="btn btn-default explodeBox" v-on:click="sendAd()">Send an ad!</button>
