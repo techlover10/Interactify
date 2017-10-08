@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" width="526.667" height="788.667" viewBox="0 0 526.67 788.67" enable-background="new 0 0 526.67 788.67" xml:space="preserve">
+	<ellipse fill="none" stroke-width="11.7333" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" cx="263.833" cy="635.821" rx="178.491" ry="57.9971"/>
+	<line fill="none" stroke-width="11.7333" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" x1="86.3423" y1="632.821" x2="86.3423" y2="759.104"/>
+	<line fill="none" stroke-width="11.7333" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" x1="442.324" y1="640.178" x2="442.324" y2="766.461"/>
+	<ellipse fill="none" stroke-width="11.7333" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" cx="58.3432" cy="492.328" rx="33.9983" ry="35.4982"/>
+	<ellipse fill="none" stroke-width="11.7333" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" cx="183.334" cy="467.335" rx="33.9983" ry="35.4982"/>
+	<ellipse fill="none" stroke-width="11.7333" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" cx="357.334" cy="468.335" rx="33.9983" ry="35.4982"/>
+	<ellipse fill="none" stroke-width="11.7333" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" cx="485.534" cy="498.335" rx="33.9983" ry="35.4982"/>
+	<path fill="none" stroke-width="11.7333" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" d="M 55.3437,532.826C 52.0105,545.826 48.6774,558.825 48.3441,571.325C 48.0107,583.824 50.6773,595.823 53.3438,607.823"/>
+	<path fill="none" stroke-width="11.7333" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" d="M 85.3422,511.827C 97.3416,525.16 109.341,538.493 114.674,550.659C 120.007,562.825 118.674,573.824 117.341,584.824"/>
+	<path fill="none" stroke-width="11.7333" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" d="M 162.338,492.828C 158.672,509.828 155.005,526.827 153.006,540.493C 151.006,554.159 150.672,564.492 150.339,574.824"/>
+	<path fill="none" stroke-width="11.7333" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" d="M 208.336,487.829C 212.669,499.828 217.002,511.827 219.002,524.494C 221.002,537.16 220.669,550.492 220.335,563.825"/>
+	<path fill="none" stroke-width="11.7333" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" d="M 332.33,489.829C 328.33,502.495 324.33,515.161 321.497,526.16C 318.664,537.16 316.997,546.492 315.331,555.825"/>
+	<path fill="none" stroke-width="11.7333" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" d="M 372.328,496.828C 375.661,508.828 378.994,520.827 378.661,532.993C 378.328,545.159 374.328,557.492 370.328,569.825"/>
+	<path fill="none" stroke-width="11.7333" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" d="M 462.323,523.827C 454.99,534.826 447.657,545.826 441.824,556.492C 435.991,567.158 431.658,577.491 427.325,587.824"/>
+	<path fill="none" stroke-width="11.7333" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" d="M 500.321,528.827C 502.321,543.159 504.321,557.492 502.155,575.991C 499.988,594.49 493.655,617.156 487.322,639.821"/>
+	<line fill="none" stroke-width="11.7333" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" x1="264.333" y1="282.839" x2="261.333" y2="497.828"/>
+	<path fill="none" stroke-width="11.7333" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" d="M 199.336,670.82C 206.669,643.821 214.002,616.822 224.335,586.824C 234.668,556.825 248,523.827 261.333,490.829C 268.333,504.495 275.332,518.161 284.499,543.826C 293.665,569.491 304.998,607.156 316.33,644.821"/>
+	<path fill="none" stroke-width="11.7333" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" d="M 247.334,405.833L 190.337,372.834L 260.333,324.837"/>
+	<path fill="none" stroke-width="11.7333" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" d="M 266.333,323.837L 346.329,368.835L 282.332,407.833"/>
+	<path fill="none" stroke-width="11.7333" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" d="M 212.336,199.843C 216.336,199.176 220.335,198.51 225.669,198.176C 231.002,197.843 237.668,197.843 244.334,197.843"/>
+	<path fill="none" stroke-width="11.7333" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" d="M 303.331,199.843C 306.664,198.843 309.998,197.843 314.497,197.343C 318.997,196.843 324.664,196.843 330.33,196.843"/>
+	<path fill="none" stroke-width="11.7333" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" d="M 249.334,250.841L 265.333,230.842L 287.332,245.841"/>
+	<ellipse fill="none" stroke-width="11.7333" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" cx="270.833" cy="210.843" rx="97.4951" ry="76.9962"/>
+	<path fill="none" stroke-width="11.7333" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" d="M 379.328,123.847C 383.327,128.847 387.327,133.846 386.327,138.013C 385.327,142.179 379.328,145.512 373.328,148.846"/>
+	<path fill="none" stroke-width="11.7333" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" d="M 402.557,119.197C 403.747,125.417 404.938,131.637 409.361,134.353C 413.784,137.07 421.439,136.283 429.094,135.496"/>
+	<path fill="none" stroke-width="11.7333" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" d="M 433.325,150.845C 426.659,151.845 419.992,152.845 416.992,157.012C 413.993,161.178 414.659,168.511 415.326,175.844"/>
+	<path fill="none" stroke-width="11.7333" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" d="M 378.327,159.845C 383.994,159.512 389.66,159.179 393.493,162.178C 397.327,165.178 399.326,171.511 401.326,177.844"/>
+</svg>
