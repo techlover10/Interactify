@@ -11,6 +11,7 @@ function cancelLoading(){
     var cardElement = document.getElementById(card.id);
     cardElement.classList.remove("moveBot");
     cardElement.classList += " moveTop";
+    cards.pop();
 }
 
 function addCard() {
@@ -79,7 +80,6 @@ function removeCard(id, strength, direction) {
             console.log(sentJSON);
             socket.emit('phone-get-sprite', sentJSON);
         }, 500);
-
     }
 }
 
@@ -134,6 +134,7 @@ function touchEnd(x, y, offsetX, offsetY, timeTaken) {
                     $('#loadingScreen').css("display", "none");
                     cardElement.classList.remove("moveBot");
                     cardElement.classList += " moveTop";
+                    cards.pop();
                 }, 5000);
             },
             async: false
