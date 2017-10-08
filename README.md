@@ -1,5 +1,25 @@
 # Roku Interactive Advertising Framework 
 
+# Installation and Usage
+
+## Important: All devices must be connected to the same wireless network in order to connect successfully.
+
+## Common Directions
+- Step 0: Install [nodejs](https://nodejs.org/en/)
+- Step 1: Clone the repository into your directory of choice.
+- Step 2: Enter the root directory of the source repository and run the command `npm install`
+- Step 3: Run the command `npm start` within the root directory
+- Step 4: From the computer (or the TV screen) navigate to http://localhost:3000/tv
+- Step 5: Find the IP address (denoted as `ipaddr`) of your localhost (operating system specific)
+- Step 6: From the phone, navigate to `ipaddr:3000/remote`
+- Step 7: From another device, navigate to the admin panel.  If you are opening the admin panel on the computer, this can be accomplished with `localhost:3000/admin`.  If on a mobile device, this can be accomplished by navigating to `ipaddr:3000/admin`.  
+
+## Windows
+- Step 5: To obtain the IP address, click the Wi-Fi button in the taskbar, where you select your wireless networks.  Click on the currently selected network, and click the "Properties" button.  Scroll to the bottom of the settings screen, and take note of the IPv4 address.  This will be your `ipaddr`.
+
+## Mac/Linux
+- Step 5: To obtain the IP address, enter a terminal and run `ifconfig`.  Find the wireless IP address of your device, typically listed under `wlp2s0`.
+
 ## Open-Source Credits
 Starting code + inspiration from [secondDeal](https://github.com/aliu139/secondDeal) by
 by [Austin Liu](https://github.com/aliu139)
