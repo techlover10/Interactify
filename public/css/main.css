@@ -124,10 +124,7 @@ body{
     float: left;
     font-size: 25px;
     border: none;
-}
-
-#mainButtons .btn:first-child{
-    margin-right: 80px;
+    margin-right:20px;
 }
 
 @media screen and (max-width: 400px){
