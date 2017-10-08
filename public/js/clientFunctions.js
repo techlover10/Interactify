@@ -1,6 +1,17 @@
 var cards = [];
 var idCounter = 0;
 var currentClientAd = null;
+var loadSite = null; // control the external site loader
+
+function cancelLoading(){
+    clearTimeout(loadSite);
+    loadSite = null;
+    $("#loadingScreen").css("display", "none");
+    var card = cards[0];
+    var cardElement = document.getElementById(card.id);
+    cardElement.classList.remove("moveBot");
+    cardElement.classList += " moveTop";
+}
 
 function addCard() {
     $.ajax({url: "/currentAdNoRefresh", 
@@ -17,7 +28,7 @@ function addCard() {
 
                 currentClientAd = currentAd;
                 document.getElementById("touchHandler").innerHTML +=
-                    `<div class="item">
+                    `<div class="item" style="z-index: 1">
                     <div id="${card.id}" class="card cardH" style="background-image: url(${currentAd.image})">
                     <div class="adContent"/>
                     </div>
@@ -112,18 +123,19 @@ function touchEnd(x, y, offsetX, offsetY, timeTaken) {
             cardElement.classList.remove("moveTop");
             cardElement.classList += " moveBot";
         }, 1000);
+        setTimeout(function(){
+            $('#loadingScreen').css("display", "block");
+        }, 2000);
         $.ajax({
             url: '/currentAdTaken',
             success: function(){
-                setTimeout(function(){
+                loadSite = setTimeout(function(){
                     window.location.href = currentClientAd.url;
-                }, 1600);
+                    $('#loadingScreen').css("display", "none");
+                }, 5000);
             },
             async: false
         });
     }
-
-
 }
-
 

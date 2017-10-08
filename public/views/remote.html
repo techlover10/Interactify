@@ -36,11 +36,6 @@
                     <input class="explodeBox" type="text" v-model="requestedSID" />
                 </div>
 
-                <section id="camera" style="display:none">
-                    <video autoplay id="camera-demo" poster="http://cirocosta.github.io/qcode-decoder/dist/assets/webcam.png"></video>
-                    <button id="scanQR" class="btn">Capture</button>             
-                </section>
-
                 <div id="mainButtons">
                     <button type="button" class="btn btn-default explodeBox" v-on:click="setUser(true)"> Client </button>
                     <button type="button" class="btn btn-default explodeBox" v-on:click="setUser(false)"> Server </button>
@@ -64,15 +59,17 @@
                     <button class="btn" id="upload" onclick="upload()"> Upload your photo </button>
                     </div>​
                 -->
-                <div id="touchHandler"></div>
+                <div id="loadingScreen" class="loader" style="display: none;">
+                    <h3> Visiting sponsored page </h3>
+                    <div class="sk-double-bounce">
+                        <div class="sk-child sk-double-bounce1"></div>
+                        <div class="sk-child sk-double-bounce2"></div>
+                    </div>
+                    <button id="cancel" class="btn" onclick="cancelLoading()">Click to cancel</button>             
+                </div>
+                <div id="touchHandler" style="z-index:1"></div>
             </div>
 
-            <div class="fullscreen-bg">
-                <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
-                    <source src="http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4" type="video/mp4">
-                        <source src="http://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_720p_stereo.ogg" type="video/ogg">
-                </video>
-            </div>
             <div id="table" v-show="client != null && !client" v-cloak>
                 <div class="path">
                     <div id="sprite" class="card cardT">
@@ -91,7 +88,6 @@
                         <span>Waiting phone to connect ...</span>
                     </div>
                 </div>
-                <div id="qr2"></div>
             </div>
         </div>
 
