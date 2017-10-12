@@ -1,5 +1,9 @@
 var idCounter = 0;
 
+function createEmbed(link){
+
+}
+
 function getAd(card) {
     // remove card from table
     var cardid = "sprite";
