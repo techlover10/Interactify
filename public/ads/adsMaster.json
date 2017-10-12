@@ -1,33 +1,10 @@
 {
-    "roku": {   
-        "url": "https://www.roku.com/index",
-        "image": "https://tse2.mm.bing.net/th?id=OIP.zfnNabSNWtOLAxdC673QAwEsCo&pid=15.1",
-        "text": "Visit Roku for more!",
-        "font": "\"Times New Roman\", Times, serif"
-    },
-    "cox": {   
-        "url": "https://www.cox.com",
-        "image": "http://www.familylifeinlv.com/wp-content/uploads/2012/02/Cox-Logo-2.png"
-    },
-    "netflix": {   
-        "url": "https://www.netflix.com",
-        "image": "http://netdna.webdesignerdepot.com/uploads/2016/06/netflix.jpg"
-    },
-    "tumblr": {   
-        "url": "https://www.tumblr.com/login",
-        "image": "img/logos&ads/tumblr.png",
-        "text": "Sign up to learn more!"
-    },
-    "duolingo": {   
-        "url": "https://www.youtube.com/watch?v=cUEkOVdUjHc",
-        "image": "img/logos&ads/duolingo.png"
-    },
     "geico": {
         "url": "https://itunes.apple.com/us/album/somebodys-watching-me-single-version/id3642731?i=3642688",
         "image": "img/logos&ads/geico.jpg",
         "text": "Swipe down to download Jingle!",
         "video": "https://www.youtube.com/watch?v=IeKsweHAREg",
-        "timecode": "16"
+        "timecode": "19"
     },
     "little caesars": {
         "url": "https://littlecaesars.com/en-us/careers-franchising/franchising/Opportunities/New-York",
