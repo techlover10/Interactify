@@ -15,7 +15,8 @@
     },
     "tumblr": {   
         "url": "https://www.tumblr.com/login",
-        "image": "img/logos&ads/tumblr_logo.jpg"
+        "image": "img/logos&ads/tumblr.png",
+        "text": "Sign up to learn more!"
     },
     "duolingo": {   
         "url": "https://www.youtube.com/watch?v=cUEkOVdUjHc",
@@ -24,6 +25,11 @@
     "geico": {
         "url": "",
         "image": "img/logos&ads/geico.jpg",
-        "text": "Swipe down to save!"
+        "text": "Swipe down to download Jingle!"
+    },
+    "little caesars": {
+        "url": "https://littlecaesars.com/en-us/careers-franchising/franchising/Opportunities/New-York",
+        "image": "img/logos&ads/littlecaesarsbeahero.jpg",
+        "text": "Order now, get free cheesy sticks"
     }
 }
