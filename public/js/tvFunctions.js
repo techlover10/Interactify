@@ -1,14 +1,9 @@
 var idCounter = 0;
 
-function removeCardFromTable(id, angle, suit, rank){
-    //document.getElementById("card" + id).remove()
-
-}
-
-function getCard(card) {
+function getAd(card) {
     // remove card from table
     var cardid = "sprite";
-    console.log("getCard called, removing " + cardid);
+    console.log("getAd called, removing " + cardid);
     if (card.isCard) {
     }
 
@@ -24,9 +19,6 @@ function getCard(card) {
         $("#sprite").removeClass("thrown");
         spriteBkgd.style.opacity = 0;
         cardElement.className += " taken";
-        // set thrown strength
-        //console.log("animating with " + "transform: translateY("+ (300) + "vh) scale(1)");
-        //cardElement.style.transform = "translateY("+ (300) + "vh) scale(1)";
     }, 5);
     console.log("animation complete");
 
@@ -67,7 +59,6 @@ function sendSprite(card) {
             console.log("adding css: " + currentAd.image);
             cardElement.style.backgroundImage = "url(" + currentAd.image + ")";
             console.log("added css: " +  "background-image", "url(" + currentAd.image + ")");
-            //allowMove(cardid)
         }, 100);
     });
 }

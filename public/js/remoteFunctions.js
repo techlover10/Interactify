@@ -64,6 +64,7 @@ function removeCard(id, strength, direction) {
         //    console.log(sentJSON)
         //    socket.emit('phone-throw-sprite', sentJSON);
         //}, 500);
+        
     } else {
         console.log("phone get");
         setTimeout(function () {
@@ -72,7 +73,6 @@ function removeCard(id, strength, direction) {
                 isCard: card.isCard, 
                 suit: card.suit, 
                 rank: card.rank, 
-                //angle: getCompassDirection(), 
                 strength: strength, 
                 custImg: card.custImg,
                 cID: idCounter--
