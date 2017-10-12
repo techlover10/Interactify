@@ -32,6 +32,13 @@
     "little caesars": {
         "url": "https://littlecaesars.com/en-us/careers-franchising/franchising/Opportunities/New-York",
         "image": "img/logos&ads/littlecaesarsbeahero.jpg",
-        "text": "Order now, get free cheesy sticks"
+        "text": "Order now, get free cheesy sticks",
+        "video": "https://www.youtube.com/watch?v=9UoVGuiXrss"
+    },
+    "game of thrones": {
+        "url": "https://play.google.com/store/apps/details?id=com.HBO&hl=en",
+        "image": "img/logos&ads/hbogo.png",
+        "text": "To Dowload HBO Go, swipe down!",
+        "video": "https://www.youtube.com/watch?v=NNY73_YcZVY"
     }
 }
