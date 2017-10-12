@@ -14,5 +14,9 @@
     "tumblr": {   
         "url": "https://www.tumblr.com/login",
         "image": "img/logos&ads/tumblr_logo.jpg"
+    },
+    "duolingo": {   
+        "url": "https://www.youtube.com/watch?v=cUEkOVdUjHc",
+        "image": "img/logos&ads/duolingo.png"
     }
 }
