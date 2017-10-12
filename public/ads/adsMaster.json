@@ -20,5 +20,10 @@
     "duolingo": {   
         "url": "https://www.youtube.com/watch?v=cUEkOVdUjHc",
         "image": "img/logos&ads/duolingo.png"
+    },
+    "geico": {
+        "url": "",
+        "image": "img/logos&ads/geico.jpg",
+        "text": "Swipe down to save!"
     }
 }
