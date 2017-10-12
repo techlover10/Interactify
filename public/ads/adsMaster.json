@@ -10,5 +10,9 @@
     "netflix": {   
         "url": "https://www.netflix.com",
         "image": "http://netdna.webdesignerdepot.com/uploads/2016/06/netflix.jpg"
+    },
+    "tumblr": {   
+        "url": "https://www.tumblr.com/login",
+        "image": "img/logos&ads/tumblr_logo.jpg"
     }
 }

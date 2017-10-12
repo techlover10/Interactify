@@ -83,7 +83,7 @@ function removeCard(id, strength, direction) {
     }
 }
 
-// SWIPE EVENTs
+// SWIPE EVENTS
 
 function touchStart(x, y) {
     // do nothing
