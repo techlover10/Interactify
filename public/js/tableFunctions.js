@@ -18,6 +18,8 @@ function getCard(card) {
         var spriteBkgd = document.getElementById("spriteBkgd");
         var adText = document.getElementById("adBlurb");
         adText.style.marginRight = "0px";
+        adText.style.innerHTML = "";
+        adText.style.fontFamily = "";
         // add 'thrown' class to start animation
         $("#sprite").removeClass("thrown");
         spriteBkgd.style.opacity = 0;
@@ -51,6 +53,9 @@ function sendSprite(card) {
                 var adText = document.getElementById("adBlurb");
                 adText.innerHTML=currentAd.text;
                 adText.style.marginRight = "120px";
+                if (currentAd.font != null){
+                    adText.style.fontFamily = currentAd.font;
+                }
             }
             // add 'thrown' class to start animation
             cardElement.className += " thrown";

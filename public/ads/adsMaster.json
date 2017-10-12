@@ -2,7 +2,8 @@
     "roku": {   
         "url": "https://www.roku.com/index",
         "image": "https://tse2.mm.bing.net/th?id=OIP.zfnNabSNWtOLAxdC673QAwEsCo&pid=15.1",
-        "text": "Visit Roku for more!"
+        "text": "Visit Roku for more!",
+        "font": "\"Times New Roman\", Times, serif"
     },
     "cox": {   
         "url": "https://www.cox.com",
