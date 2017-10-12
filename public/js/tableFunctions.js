@@ -47,6 +47,9 @@ function sendSprite(card) {
         }
         // little hack to trigger the animation
         setTimeout(function () {
+
+            $("#ad")[0].src += "&autoplay=1";
+
             var cardElement = document.getElementById("sprite");
             var spriteBkgd = document.getElementById("spriteBkgd");
             if (currentAd.text != null){

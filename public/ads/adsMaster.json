@@ -25,7 +25,9 @@
     "geico": {
         "url": "https://itunes.apple.com/us/album/somebodys-watching-me-single-version/id3642731?i=3642688",
         "image": "img/logos&ads/geico.jpg",
-        "text": "Swipe down to download Jingle!"
+        "text": "Swipe down to download Jingle!",
+        "video": "https://www.youtube.com/watch?v=IeKsweHAREg",
+        "timecode": "16"
     },
     "little caesars": {
         "url": "https://littlecaesars.com/en-us/careers-franchising/franchising/Opportunities/New-York",

@@ -12,7 +12,6 @@ let basePath = __dirname;
 var fs = require('fs');
 
 // scaffolding for ad switcher endpoint
-//var ads = ["roku", "cox", "netflix", "cornell", "hulu"]
 var ads = JSON.parse(fs.readFileSync('public/ads/adsMaster.json', 'utf8'));
 var currentAd = null;
 var getCurrentAd = function(adSelected){
