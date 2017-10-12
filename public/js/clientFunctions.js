@@ -111,13 +111,13 @@ function touchEnd(x, y, offsetX, offsetY, timeTaken) {
     var min = Math.min(2000, pps);
     var percentage = Math.trunc(min / 2000 * 100);
     var cardElement = document.getElementById(card.id);
-    if (offsetY < 0){
+    if (offsetY < -10){
         removeCard(card.id, percentage, -1);
         setTimeout(function() {
             cardElement.classList.remove("moveBot");
             cardElement.classList += " moveTop";
         }, 1000);
-    } else {
+    } else if (offsetY > 10){
         removeCard(card.id, percentage, 1);
         setTimeout(function() {
             cardElement.classList.remove("moveTop");

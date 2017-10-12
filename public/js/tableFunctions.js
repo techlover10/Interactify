@@ -15,8 +15,10 @@ function getCard(card) {
     // little hack to trigger the animation
     setTimeout(function () {
         var cardElement = document.getElementById(cardid);
+        var spriteBkgd = document.getElementById("spriteBkgd");
         // add 'thrown' class to start animation
         $("#sprite").removeClass("thrown");
+        spriteBkgd.style.opacity = 0;
         cardElement.className += " taken";
         // set thrown strength
         //console.log("animating with " + "transform: translateY("+ (300) + "vh) scale(1)");
@@ -43,8 +45,10 @@ function sendSprite(card) {
         // little hack to trigger the animation
         setTimeout(function () {
             var cardElement = document.getElementById("sprite");
+            var spriteBkgd = document.getElementById("spriteBkgd");
             // add 'thrown' class to start animation
             cardElement.className += " thrown";
+            spriteBkgd.style.opacity = 1;
             // set thrown strength
             console.log("adding css: " + currentAd.image);
             cardElement.style.backgroundImage = "url(" + currentAd.image + ")";

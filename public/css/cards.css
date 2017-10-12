@@ -22,7 +22,28 @@ see license: https://github.com/pakastin/deck-of-cards/blob/master/LICENSE
   border-radius: 1rem;
   border-opacity: 0.38;
   overflow:hidden;
+  z-index: 100;
 }
+
+.spriteBkgd{
+    padding-left: 70px;
+    padding-right: 70px;
+    left: -10px;
+    border-radius: 1rem;
+    padding-top: 70px;
+    top: -10px;
+    padding-bottom: 125px;
+    background-color: rgba(0,0,0,0.2);
+    transform: translateY(10vh);
+    z-index: 1;
+    position: absolute;
+}
+
+.transitionFade{
+    transition: opacity 1s ease-in-out;
+}
+
+
 
 .roku {
   background-image: url("https://tse2.mm.bing.net/th?id=OIP.zfnNabSNWtOLAxdC673QAwEsCo&pid=15.1");
@@ -74,4 +95,64 @@ see license: https://github.com/pakastin/deck-of-cards/blob/master/LICENSE
 }
 
 
+/* Arrow bounce */
+
+.animated { 
+    -webkit-animation-duration: 2s; 
+    -moz-animation-duration: 2s; 
+    -o-animation-duration: 2s; 
+    animation-duration: 2s; 
+    
+    -webkit-animation-fill-mode: both; 
+    -moz-animation-fill-mode: both; 
+    -o-animation-fill-mode: both; 
+    animation-fill-mode: both; 
+
+    -webkit-animation-iteration-count:infinite; 
+    -moz-animation-iteration-count:infinite; 
+    -o-animation-iteration-count:infinite; 
+    animation-iteration-count:infinite; 
+} 
+
+@-webkit-keyframes bounce { 
+    0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);} 
+    40% {-webkit-transform: translateY(-30px);} 
+    60% {-webkit-transform: translateY(-15px);} 
+} 
+
+@-moz-keyframes bounce { 
+    0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);} 
+    40% {-moz-transform: translateY(-30px);} 
+    60% {-moz-transform: translateY(-15px);} 
+} 
+
+@-o-keyframes bounce { 
+    0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);} 
+    40% {-o-transform: translateY(-30px);} 
+    60% {-o-transform: translateY(-15px);} 
+} 
+
+@keyframes bounce { 
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+    40% {transform: translateY(-30px);} 
+    60% {transform: translateY(-15px);} 
+} 
+
+.bounce { 
+    -webkit-animation-name: bounce; 
+    -moz-animation-name: bounce;     
+    -o-animation-name: bounce; 
+    animation-name: bounce; 
+}
+.arrow {
+  z-index: 2;
+  position: absolute;
+  transform: translateY(10vh);
+  left: 40px;
+  top: 200px;
+  width: 40px;
+  height: 40px;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yOTMuNzUxLDQ1NS44NjhjLTIwLjE4MSwyMC4xNzktNTMuMTY1LDE5LjkxMy03My42NzMtMC41OTVsMCwwYy0yMC41MDgtMjAuNTA4LTIwLjc3My01My40OTMtMC41OTQtNzMuNjcyICBsMTg5Ljk5OS0xOTBjMjAuMTc4LTIwLjE3OCw1My4xNjQtMTkuOTEzLDczLjY3MiwwLjU5NWwwLDBjMjAuNTA4LDIwLjUwOSwyMC43NzIsNTMuNDkyLDAuNTk1LDczLjY3MUwyOTMuNzUxLDQ1NS44Njh6Ii8+DQo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjIwLjI0OSw0NTUuODY4YzIwLjE4LDIwLjE3OSw1My4xNjQsMTkuOTEzLDczLjY3Mi0wLjU5NWwwLDBjMjAuNTA5LTIwLjUwOCwyMC43NzQtNTMuNDkzLDAuNTk2LTczLjY3MiAgbC0xOTAtMTkwYy0yMC4xNzgtMjAuMTc4LTUzLjE2NC0xOS45MTMtNzMuNjcxLDAuNTk1bDAsMGMtMjAuNTA4LDIwLjUwOS0yMC43NzIsNTMuNDkyLTAuNTk1LDczLjY3MUwyMjAuMjQ5LDQ1NS44Njh6Ii8+DQo8L3N2Zz4=);
+  background-size: contain;
+}
 
