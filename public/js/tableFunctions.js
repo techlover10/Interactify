@@ -16,6 +16,8 @@ function getCard(card) {
     setTimeout(function () {
         var cardElement = document.getElementById(cardid);
         var spriteBkgd = document.getElementById("spriteBkgd");
+        var adText = document.getElementById("adBlurb");
+        adText.style.marginRight = "0px";
         // add 'thrown' class to start animation
         $("#sprite").removeClass("thrown");
         spriteBkgd.style.opacity = 0;
@@ -30,7 +32,6 @@ function getCard(card) {
         $("#sprite").removeClass("taken");
         $.get("/currentAdTaken", function (){
             $("#sprite").css( "background-image", "none");
-
         });
     }, 1500);
 }
@@ -46,6 +47,11 @@ function sendSprite(card) {
         setTimeout(function () {
             var cardElement = document.getElementById("sprite");
             var spriteBkgd = document.getElementById("spriteBkgd");
+            if (currentAd.text != null){
+                var adText = document.getElementById("adBlurb");
+                adText.innerHTML=currentAd.text;
+                adText.style.marginRight = "120px";
+            }
             // add 'thrown' class to start animation
             cardElement.className += " thrown";
             spriteBkgd.style.opacity = 1;

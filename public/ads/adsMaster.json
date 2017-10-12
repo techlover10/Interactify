@@ -1,7 +1,8 @@
 {
     "roku": {   
         "url": "https://www.roku.com/index",
-        "image": "https://tse2.mm.bing.net/th?id=OIP.zfnNabSNWtOLAxdC673QAwEsCo&pid=15.1"
+        "image": "https://tse2.mm.bing.net/th?id=OIP.zfnNabSNWtOLAxdC673QAwEsCo&pid=15.1",
+        "text": "Visit Roku for more!"
     },
     "cox": {   
         "url": "https://www.cox.com",
