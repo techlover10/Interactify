@@ -117,12 +117,11 @@ io.on('connection', function(socket){
 
 
     // receives a get card message from a phone
-    socket.on('phone-get-sprite', function (data) {
+    socket.on('phone-get-sprite', function (tableId) {
         console.log("card gotten")
-        console.log(data)
-        var tableSocket = tableSockets[data.tableId];
+        var tableSocket = tableSockets[tableId];
         if (tableSocket) {
-            tableSocket.emit('phone-get-sprite', data);
+            tableSocket.emit('phone-get-sprite');
         }
     });
 

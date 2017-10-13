@@ -16,7 +16,7 @@ window.main = new Vue({
             $(isClient ? "#deck" : "#table").show();
             if (isClient) {
                 // init a deck of 10 cards
-                init(10);
+                //init(10);
 
                 // register phone connection
                 socket.emit('phone-connect', this.requestedSID);

@@ -27,12 +27,10 @@ function onPlayerStateChange(mode){
 }
 
 
-function getAd(card) {
+function getAd() {
     // remove card from table
     var cardid = "sprite";
     console.log("getAd called, removing " + cardid);
-    if (card.isCard) {
-    }
 
     // little hack to trigger the animation
     setTimeout(function () {
