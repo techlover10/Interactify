@@ -1,0 +1,10 @@
+{
+    "adName": {
+        "url": "url of page to link to",
+        "image": "image for the sprite",
+        "text": "optional - text to accompany the sprite",
+        "video": "accompanying video from youtube",
+        "timecode": "optional - time for the sprite to appear relative to the ad starting (in seconds)",
+        "font": "optional - custom font for the ad text"
+
+    }
