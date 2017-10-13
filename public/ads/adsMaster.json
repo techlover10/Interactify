@@ -17,5 +17,11 @@
         "image": "img/logos&ads/hbogo.png",
         "text": "Add to your calendar, swipe down!",
         "video": "https://www.youtube.com/watch?v=NNY73_YcZVY"
+    },
+    "avocados": {
+        "url": "https://en.wikipedia.org/wiki/Avocado",
+        "image": "img/logos&ads/avocadosfromMX.png",
+        "text": "Swipe down and download the recipe!",
+        "video": "https://www.youtube.com/watch?v=A5yFxkUitBw"
     }
 }
