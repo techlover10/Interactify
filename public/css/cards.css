@@ -26,14 +26,15 @@ see license: https://github.com/pakastin/deck-of-cards/blob/master/LICENSE
 }
 
 .spriteBkgd{
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 30px;
+    padding-right: 50px;
     right: -10px;
     border-radius: 1rem;
     /*padding-top: 70px;
     padding-bottom: 125px;*/
     top: -10px;
     min-height: 195px;
+    min-width: 195px;
     background-color: rgba(0,0,0,0.3);
     transform: translateY(10vh);
     z-index: 1;

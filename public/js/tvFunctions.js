@@ -42,6 +42,7 @@ function getAd(card) {
         adText.style.marginRight = "0px";
         adText.style.innerHTML = "";
         adText.style.fontFamily = "";
+        adText.style.minWidth="";
         // add 'thrown' class to start animation
         $("#sprite").removeClass("thrown");
         spriteBkgd.style.opacity = 0;
@@ -83,7 +84,8 @@ function sendSprite(card) {
                 if (currentAd.text != null){
                     var adText = document.getElementById("adBlurb");
                     adText.innerHTML=currentAd.text;
-                    adText.style.marginRight = "120px";
+                    adText.style.marginRight = "90px";
+                    adText.style.minWidth="200px";
                     if (currentAd.font != null){
                         adText.style.fontFamily = currentAd.font;
                     }
