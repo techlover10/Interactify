@@ -20,7 +20,7 @@ function onYouTubeIframeAPIReady() {
 }
 
 function onPlayerStateChange(mode){
-    if (mode == -1){
+    if (mode.data == 0){
         player.loadVideoById(defaultContent.split('?v=')[1], savedTime);
         player.playVideo();
     }
