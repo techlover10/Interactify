@@ -24,5 +24,12 @@
         "text": "Swipe down and download our guac recipe!",
         "video": "https://www.youtube.com/watch?v=A5yFxkUitBw",
         "timecode": "10"
+    },
+    "rick and morty": {
+        "url": "http://www.adultswim.com/videos/rick-and-morty",
+        "image": "http://www.adweek.com/wp-content/uploads/2017/04/rick-morty-mcdonalds-hed-2017-840x460.jpg",
+        "text": "Catch up with Season 2 on Adult Swim!",
+        "video": "https://www.youtube.com/watch?v=U1_DAH1wCSY",
+        "timecode": "10"
     }
 }
