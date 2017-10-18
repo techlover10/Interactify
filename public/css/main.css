@@ -83,6 +83,11 @@ body{
     height: 100px;
 }
 
+h3 {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
 #ico img{
     height: 1.5rem;
 }
@@ -137,7 +142,6 @@ body{
        height: 100%;
        width: 100%;
        margin: 0;
-       background: url(../img/prop.png) no-repeat center center fixed; 
        -webkit-background-size: cover;
        -moz-background-size: cover;
        -o-background-size: cover;
@@ -155,7 +159,6 @@ body{
         padding-left: 5px;
         padding-right: 5px;
         font-size: 13px;
-        width: 100vw;
     }
 
     #mainNum{
@@ -192,28 +195,36 @@ body{
     }
 
     #mainButtons{
-        position: absolute;
-        bottom: 0;
+        bottom: 25%;
         width: 100%;
     }
 
     #mainButtons .btn{
         width: 50%;
-        float: left;
+        margin-left:25%;
         font-size: 25px;
+        border-radius:0.4rem;
+        margin-bottom:7px;
     }
 
     #mainButtons .btn:first-child{
         background: white; /* For browsers that do not support gradients */
-        background: -webkit-linear-gradient(white, lightgreen); /* For Safari 5.1 to 6.0 */
-        background: -o-linear-gradient(white, lightgreen); /* For Opera 11.1 to 12.0 */
-        background: -moz-linear-gradient(white, lightgreen); /* For Firefox 3.6 to 15 */
-        background: linear-gradient(white, lightgreen); /* Standard syntax */
+        background: -webkit-linear-gradient(white, lightgrey); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(white, lightgrey); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(white, lightgrey); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(white, lightgrey); /* Standard syntax */
 
-        margin-right: 0;
     }
 
     #mainButtons .btn:nth-child(2){
+        background: white; /* For browsers that do not support gradients */
+        background: -webkit-linear-gradient(white, lightblue); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(white, lightblue); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(white, lightblue); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(white, lightblue); /* Standard syntax */
+    }
+
+    #mainButtons .btn:nth-child(3){
         background: white; /* For browsers that do not support gradients */
         background: -webkit-linear-gradient(white, lightsalmon); /* For Safari 5.1 to 6.0 */
         background: -o-linear-gradient(white, lightsalmon); /* For Opera 11.1 to 12.0 */
