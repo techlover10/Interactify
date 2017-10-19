@@ -31,5 +31,17 @@
         "text": "Catch up with Season 2 on Adult Swim!",
         "video": "https://www.youtube.com/watch?v=U1_DAH1wCSY",
         "timecode": "10"
+    },
+    "lyft":  {
+        "url": "https://play.google.com/store/apps/details?id=me.lyft.android&hl=en",
+        "image": "img/logos&ads/lyft.png",
+        "text": "Swipe Down, Download Lyft!",
+        "video": "https://www.youtube.com/watch?v=hoTuzbPgdww"
+    },
+    "bounty": {
+        "url": "https://www.amazon.com/Bounty-Paper-Towels-Print-Regular/dp/B015TYDZTE/ref=sr_1_6_s_it?ie=UTF8&qid=1508448874&sr=1-6&keywords=bounty+paper+towels",
+        "image": "img/logos&ads/bounty_logo.png",
+        "text": "Swipe down and get 10% off 8ct Bounty Paper Towels!",
+        "video": "https://www.youtube.com/watch?v=izJcs6JcP10"   
     }
 }
