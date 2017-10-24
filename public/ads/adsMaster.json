@@ -43,5 +43,29 @@
         "image": "img/logos&ads/bounty_logo.png",
         "text": "Swipe down and get 10% off 8ct Bounty Paper Towels!",
         "video": "https://www.youtube.com/watch?v=izJcs6JcP10"   
+    },
+    "Maybelline": {
+        "url": "https://www.maybelline.com/makeup-tips",
+        "image": "img/logos&ads/maybelline.jpg",
+        "text": "Swipe down and get make up tips!",
+        "video": "https://www.youtube.com/watch?v=0aUBClo9o1A"   
+    },
+    "We bare bears": {
+        "url": "http://www.cartoonnetwork.com/video/we-bare-bears/",
+        "image": "img/logos&ads/we_bare_bears.png",
+        "text": "Swipe down and buy new season!",
+        "video": "https://www.youtube.com/watch?v=CS7-FJWONkw"   
+    },
+    "League of Lengends": {
+        "url": "http://www.lolesports.com/en_US/tickets",
+        "image": "img/logos&ads/league_of_legends.jpg",
+        "text": "Buy the tickets for S7 worlds now!",
+        "video": "https://www.youtube.com/watch?v=QHYxCyt8LA4"   
+    },
+    "Clash Royale": {
+        "url": "https://itunes.apple.com/us/app/clash-royale/id1053012308?mt=8",
+        "image": "img/logos&ads/clash_royale.jpg",
+        "text": "Swipe down to download and play!",
+        "video": "https://www.youtube.com/watch?v=G6iursoHQ1k"   
     }
 }
