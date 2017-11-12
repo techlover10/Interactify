@@ -2,6 +2,9 @@ var idCounter = 0;
 var defaultContent = "https://www.youtube.com/watch?v=KEWRNgiLCuI";
 var savedTime = 0;
 
+// has displayed tutorial?
+var hasDisplayedTutorial = false;
+
 // Handle the YouTube embed
 var tag = document.createElement('script');
 tag.id = 'iframe-demo';
@@ -88,6 +91,15 @@ function sendSprite(card) {
                         adText.style.fontFamily = currentAd.font;
                     }
                 }
+
+                if (!hasDisplayedTutorial){
+                    $('#spriteTutorial').css({"display": "block"});
+                } else {
+                    $('#spriteTutorial').css({"display": "none"});
+                }
+                // set tutorial to not display
+                hasDisplayedTutorial = true;
+
                 // add 'thrown' class to start animation
                 cardElement.className += " thrown";
                 spriteBkgd.style.opacity = 1;
@@ -95,6 +107,7 @@ function sendSprite(card) {
                 console.log("adding css: " + currentAd.image);
                 cardElement.style.backgroundImage = "url(" + currentAd.image + ")";
                 console.log("added css: " +  "background-image", "url(" + currentAd.image + ")");
+
             }, spriteTime);
 
         }, 100);
