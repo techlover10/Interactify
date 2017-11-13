@@ -3,7 +3,8 @@ var defaultContent = "https://www.youtube.com/watch?v=KEWRNgiLCuI";
 var savedTime = 0;
 
 // has displayed tutorial?
-var hasDisplayedTutorial = false;
+var hasDisplayedTutorial = 0;
+var tutorialLimit = 3;
 
 // Handle the YouTube embed
 var tag = document.createElement('script');
@@ -92,13 +93,12 @@ function sendSprite(card) {
                     }
                 }
 
-                if (!hasDisplayedTutorial){
+                if (hasDisplayedTutorial < tutorialLimit){
                     $('#spriteTutorial').css({"display": "block"});
+                    hasDisplayedTutorial += 1;
                 } else {
                     $('#spriteTutorial').css({"display": "none"});
                 }
-                // set tutorial to not display
-                hasDisplayedTutorial = true;
 
                 // add 'thrown' class to start animation
                 cardElement.className += " thrown";
