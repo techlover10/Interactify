@@ -11,7 +11,7 @@ let basePath = __dirname;
 // ads loader
 var fs = require('fs');
 
-// scaffolding for ad switcher endpoint
+// ad switcher endpoint
 var ads = JSON.parse(fs.readFileSync('public/ads/adsMaster.json', 'utf8'));
 var currentAd = null;
 var getCurrentAd = function(adSelected){
@@ -23,11 +23,18 @@ var getCurrentAd = function(adSelected){
     return currentAd;
 }
 
+// Content control for Interactify V2 - Platform
+var content = JSON.parse(fs.readFileSync('public/ads/contentSystem.json', 'utf-8'));
+
 // Use body parser for post requests
 app.use(bodyParser.json());
 
 router.get("/adsList", function(req, res){
     res.send(ads);
+});
+
+router.get("/contentList", function(req, res){
+    res.send(content);
 });
 
 router.get("/",function(req,res){
@@ -38,8 +45,16 @@ router.get("/tv",function(req,res){
   res.render("tv");
 });
 
+router.get("/v2tv",function(req,res){
+  res.render("v2tv");
+});
+
 router.get("/remote",function(req,res){
   res.render("remote");
+});
+
+router.get("/v2remote",function(req,res){
+  res.render("v2_remote");
 });
 
 router.get("/admin",function(req,res){
@@ -57,7 +72,11 @@ router.get("/currentAdTaken", function(req, res){
 });
 
 router.get("/currentAdNoRefresh", function(req, res){
-    res.send(ads[currentAd]);
+    if (ads[currentAd]){
+        res.send(ads[currentAd]);
+    } else {
+        res.send(content[currentAd]);
+    }
 });
 
 app.engine('html', require('ejs').renderFile);

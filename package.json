@@ -8,13 +8,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "express": "*",
-    "path": "*",
-    "socket.io": "*",
+    "body-parser": "*",
     "ejs": "*",
-    "nodemon": "*",
+    "express": "*",
     "http": "*",
-    "body-parser": "*"
+    "nodemon": "*",
+    "path": "*",
+    "socket.io": "*"
   },
   "repository": {
     "type": "git",
