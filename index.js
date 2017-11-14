@@ -41,6 +41,9 @@ router.get("/",function(req,res){
   res.render("index");
 });
 
+router.get("/v2",function(req,res){
+  res.render("indexv2");
+});
 router.get("/tv",function(req,res){
   res.render("tv");
 });
@@ -59,6 +62,10 @@ router.get("/v2remote",function(req,res){
 
 router.get("/admin",function(req,res){
   res.render("admin");
+});
+
+router.get("/fakestagram",function(req,res){
+  res.render("fakestagram");
 });
 
 app.post("/currentAd", function(req, res){

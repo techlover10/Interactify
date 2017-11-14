@@ -4,6 +4,10 @@
         <title>Fakestagram</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0"/>
 
+        <!-- jquery for refreshing -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/zuck.js/1.1.0/zuck.js"></script>
+
         <!-- styles just for demo -->
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
         
@@ -11,17 +15,12 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/zuck.js/1.1.0/zuck.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/zuck.js/1.1.0/skins/snapgram.min.css">
     </head>
-    <body style="display:none">
-        <h1 id="header">&nbsp;</h1>
-				
-		<a href="https://ramon.codes/projects/zuck.js" target="_blank" class="disclaimer">
-			<img src="ICON.png">
-			
-		</a>
-		
+    <body style="display:block; text-align: center; font-family:Roboto">
+
+        <h1> Fakestagram </h1>
+        <button onclick="refreshPage()">Refresh</button>
 		<div id="stories"></div>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/zuck.js/1.1.0/zuck.js"></script>
         <script>
             function buildItem(id, type, length, src, preview, link, linkText, seen, time){
                 return {
@@ -70,18 +69,6 @@
                     cubeEffect: skins[skin]['cubeEffect'],
 					localStorage: true,
 					stories: [
-						{
-							id: "ramon",
-							photo: "https://avatars1.githubusercontent.com/u/2271175?v=3&s=460",
-							name: "Ramon",
-							link: "https://ramon.codes",
-							lastUpdated: timestamp(),
-							items: [
-								buildItem("ramon-1", "photo", 3, "https://scontent-gru2-2.cdninstagram.com/t51.2885-15/e15/10810091_1527190460857578_541280638_n.jpg", "https://scontent-gru2-2.cdninstagram.com/t51.2885-15/e15/10810091_1527190460857578_541280638_n.jpg", '', false, false, timestamp()),
-								buildItem("ramon-2", "photo", 3, "https://scontent-gru2-2.cdninstagram.com/t51.2885-15/e15/10597412_455246124639813_1360162248_n.jpg", "https://scontent-gru2-2.cdninstagram.com/t51.2885-15/e15/10597412_455246124639813_1360162248_n.jpg", 'https://ramon.codes', 'Visit my Portfolio', false, timestamp()),
-								buildItem("ramon-3", "video", 0, "https://scontent-gru2-2.cdninstagram.com/t50.2886-16/14965218_193969377722724_482497862983221248_n.mp4", "https://scontent-gru2-2.cdninstagram.com/t51.2885-15/e15/10597412_455246124639813_1360162248_n.jpg", '', false,  false, 1504023497)
-							]
-						},
 						{
 							id: "gorillaz",
 							photo: "https://lh3.googleusercontent.com/xYFz6B9FHMQq7fDOI_MA61gf0sNdzGBbdR7-mZ7i4rEVvE_N-kZEY_A4eP74Imcf8Sq3FYxAgd4eJA=w200",
@@ -146,6 +133,19 @@
 			};
 			
 			initDemo();
+            function refreshPage(){
+                $.ajax({url: "/currentAdNoRefresh", 
+                    success: function (currentAd) {
+                        console.log("getting current ad");
+                        if (currentAd){
+                            console.log(currentAd);
+                            stories.remove("ad");
+                            stories.update(currentAd);
+                        }
+                    },
+                    async: false});
+
+            }
         </script>
     </body>
 </html>
