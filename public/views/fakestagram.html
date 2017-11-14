@@ -18,7 +18,7 @@
     <body style="display:block; text-align: center; font-family:Roboto">
 
         <h1> Fakestagram
-        <img src="img/refresh.png" onclick="initDemo()" style="max-width:30px"></img>
+        <img src="img/refresh.png" onclick="refreshDemo()" style="max-width:30px"></img>
         </h1>
 		<div id="stories"></div>
 
@@ -143,6 +143,10 @@
 			};
 			
 			initDemo();
+
+            function refreshDemo(){
+                location.reload();
+            }
             //function refreshPage(){
             //    $.ajax({url: "/currentAdNoRefresh", 
             //        success: function (currentAd) {
