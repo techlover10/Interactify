@@ -18,7 +18,7 @@ window.main = new Vue({
             },
             ajax: false
         });
-        socket.emit('admin-connect', this.requestedSID);
+        socket.emit('phone-connect', this.requestedSID);
     },
     methods: {
         sendAd: function () {

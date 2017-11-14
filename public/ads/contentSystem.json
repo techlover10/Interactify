@@ -1,6 +1,24 @@
 {
     "$1 dog vs $10k dog": {
         "video": "https://www.youtube.com/watch?v=ketCUtFpzNo",
-        "ad": "rick and morty"
+        "ad": "rick and morty",
+        "storyObject": {
+            "id": "ad",
+            "photo": "http://www.adweek.com/wp-content/uploads/2017/04/rick-morty-mcdonalds-hed-2017-840x460.jpg",
+            "name": "Rick and Morty",
+            "lastUpdated": "Sponsored Content",
+            "seen": false,
+            "items": [
+                {
+                    "id": "pic1",
+                    "type": "photo",
+                    "length": "3",
+                    "src": "http://nerdist.com/wp-content/uploads/2016/05/Rick-and-Morty.jpg",
+                    "link": "http://www.adultswim.com/videos/rick-and-morty",
+                    "linkText": "Visit Adult Swim!",
+                    "seen": "false"
+                }
+            ]
+        }
     }
 }

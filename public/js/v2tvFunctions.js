@@ -1,5 +1,5 @@
 var idCounter = 0;
-var defaultContent = "https://www.youtube.com/watch?v=KEWRNgiLCuI";
+var defaultContent = "";
 var savedTime = 0;
 
 // has displayed tutorial?
@@ -85,7 +85,7 @@ function sendAd(){
 function phoneConnected() {
     // remove banner when a phone connects
     console.log("phoneConnected")
-    player.playVideo();
+    //player.playVideo();
 
     let el = document.getElementById("waiting-for-device")
     if(el){

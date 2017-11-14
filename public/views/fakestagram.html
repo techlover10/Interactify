@@ -18,7 +18,7 @@
     <body style="display:block; text-align: center; font-family:Roboto">
 
         <h1> Fakestagram </h1>
-        <button onclick="refreshPage()">Refresh</button>
+        <button onclick="initDemo()">Refresh</button>
 		<div id="stories"></div>
 
         <script>
@@ -113,6 +113,16 @@
 						}
 					]
 				});
+                $.ajax({url: "/currentAdNoRefresh", 
+                    success: function (currentAd) {
+                        console.log("getting current ad");
+                        if (currentAd){
+                            console.log(currentAd);
+                            stories.remove("ad");
+                            stories.update(currentAd.storyObject);
+                        }
+                    },
+                    async: false});
                 
                 var el = document.querySelectorAll('#skin option');
                 var total = el.length;
@@ -133,19 +143,18 @@
 			};
 			
 			initDemo();
-            function refreshPage(){
-                $.ajax({url: "/currentAdNoRefresh", 
-                    success: function (currentAd) {
-                        console.log("getting current ad");
-                        if (currentAd){
-                            console.log(currentAd);
-                            stories.remove("ad");
-                            stories.update(currentAd);
-                        }
-                    },
-                    async: false});
-
-            }
+            //function refreshPage(){
+            //    $.ajax({url: "/currentAdNoRefresh", 
+            //        success: function (currentAd) {
+            //            console.log("getting current ad");
+            //            if (currentAd){
+            //                console.log(currentAd);
+            //                stories.remove("ad");
+            //                stories.update(currentAd.storyObject);
+            //            }
+            //        },
+            //        async: false});
+            //}
         </script>
     </body>
 </html>
