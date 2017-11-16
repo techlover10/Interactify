@@ -24,5 +24,26 @@
             "caption": "<Caption Text>",
             "link": "<ACTION LINK>"
         }
+    },
+    "titanic": {
+        "video": "https://www.youtube.com/watch?v=KqZNW-rh0ZM",
+        "ad": "celine dion",
+        "storyObject": {
+            "id": "follow",
+            "photo": "img/fakestagram/dion.jpg",
+            "name": "Celine Dion",
+            "seen": false,
+            "items": [
+                {
+                    "id": "pic2",
+                    "type": "photo",
+                    "length": "3",
+                    "src": "img/fakestagram/celinediontour2017-4.jpb",
+                    "link": "http://www.celinedion.com/",
+                    "linkText": "Follow Celine's Journey!",
+                    "seen": "false"
+                }
+            ]  
+        }
     }
 }
