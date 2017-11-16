@@ -59,27 +59,17 @@ function getAd() {
     }, 1500);
 }
 
-function sendSprite(card) {
-    // add card to table
-    console.log("sendSprite called")
+function sendAd(){
     $.get("/currentAdNoRefresh", function (currentAd){
         if (currentAd == null || currentAd.video == null){
             return;
         }
 
-        // little hack to trigger the animation
-        setTimeout(function () {
-
-            player.pauseVideo();
-            savedTime = player.getCurrentTime();
-            player.loadVideoById(currentAd.video.split('?v=')[1]);
-            player.playVideo();
-        }, 100);
+        player.pauseVideo();
+        savedTime = player.getCurrentTime();
+        player.loadVideoById(currentAd.video.split('?v=')[1]);
+        player.playVideo();
     });
-}
-
-function sendAd(){
-    sendSprite({"id": 0, "isCard": true});
 }
 
 function phoneConnected() {
