@@ -18,6 +18,11 @@
                     "seen": "false"
                 }
             ]
+        },
+        "tinderObject": {
+            "photo": "<SRC LINK>",
+            "caption": "<Caption Text>",
+            "link": "<ACTION LINK>"
         }
     },
     "titanic": {
