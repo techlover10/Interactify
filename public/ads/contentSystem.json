@@ -45,5 +45,26 @@
                 }
             ]  
         }
+    },
+    "omega": {
+        "video": "https://www.youtube.com/watch?v=T3O1lApvhRQ",
+        "ad": "omega",
+        "storyObject": {
+            "id": "follow omega watches",
+            "photo": "img/fakestagram/omega_icon",
+            "name": "Omega Watches",
+            "seen": false,
+            "items": [
+                {
+                    "id": "pic3",
+                    "type": "photo",
+                    "length": "10",
+                    "src": "img/fakestagram/omega.jpg",
+                    "link": "https://www.omegawatches.com/",
+                    "linkText": "Learn More about Omega Watches",
+                    "seen": "false"
+                }
+            ]  
+        }
     }
 }
