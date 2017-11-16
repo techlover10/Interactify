@@ -51,7 +51,7 @@
         "ad": "omega",
         "storyObject": {
             "id": "follow omega watches",
-            "photo": "img/fakestagram/omega_icon",
+            "photo": "img/fakestagram/omega_icon.jpg",
             "name": "Omega Watches",
             "seen": false,
             "items": [
