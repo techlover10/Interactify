@@ -94,6 +94,17 @@
                     "seen": "false"
                 }
             ]  
+        },
+        "tinderObject": {
+            "photo": "img/fakestagram/omega007.jpg",
+            "caption": "Swipe right to see Omega 007 collaboration",
+            "link": "https://www.salonqp.com/updates/watch-culture/omega-announces-seamaster-aqua-terra-james-bond-watch-for-spectre/"
+        },
+        "inlineInstagram": {
+            "user": "omega",
+            "image": "img/fakestagram/omega007.jpg",
+            "link": "https://www.crownandcaliber.com/products/omega-seamaster-james-bond-ltd-ed-2730-of-7007-233-32-41-21-01-001-10-10-ome-4cakrp?variant=624270442511&dfw_tracker=26531-624270442511&utm_campaign=ROIEcommShoppingBrandPriceBuckets&utm_term=10-10-OME-4CAKRP&gclid=EAIaIQobChMIw5vYopPG1wIVFzaBCh1KBAj_EAkYHSABEgI9L_D_BwE",
+            "userProf": "img/fakestagram/omega_icon.jpg"
         }
     },
     "KFC": {
