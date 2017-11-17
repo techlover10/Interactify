@@ -1,4 +1,26 @@
 {
+    "Narcos Season3": {
+        "video": "https://www.youtube.com/watch?v=j73-IvTvNN0",
+        "ad": "Juul",
+        "storyObject": {
+            "id": "ad",
+            "photo": "img/fakestagram/Juul.png",
+            "name": "Juul",
+            "seen": false,
+            "items": [
+                {
+                    "id": "pic3",
+                    "type": "photo",
+                    "length": "4",
+                    "src": "img/fakestagram/SmokingJuul.jpg",
+                    "link": "https://www.juulvapor.com/shop-juul",
+                    "linkText": "Wanna feel Narcos without being Narcos?",
+                    "seen": "true"
+                }
+            ]
+        }
+    },
+
     "$1 dog vs $10k dog": {
         "video": "https://www.youtube.com/watch?v=ketCUtFpzNo",
         "ad": "rick and morty",
@@ -19,6 +41,7 @@
                 }
             ]
         },
+
         "tinderObject": {
             "photo": "<SRC LINK>",
             "caption": "<Caption Text>",
@@ -37,13 +60,55 @@
                 {
                     "id": "pic2",
                     "type": "photo",
-                    "length": "3",
-                    "src": "img/fakestagram/celinediontour2017-4.jpb",
+                    "length": "10",
+                    "src": "img/fakestagram/celinediontour2017-4.jpg",
                     "link": "http://www.celinedion.com/",
                     "linkText": "Follow Celine's Journey!",
                     "seen": "false"
                 }
             ]  
+        }
+    },
+    "omega": {
+        "video": "https://www.youtube.com/watch?v=T3O1lApvhRQ",
+        "ad": "omega",
+        "storyObject": {
+            "id": "follow omega watches",
+            "photo": "img/fakestagram/omega_icon.jpg",
+            "name": "Omega Watches",
+            "seen": false,
+            "items": [
+                {
+                    "id": "pic3",
+                    "type": "photo",
+                    "length": "10",
+                    "src": "img/fakestagram/omega.jpg",
+                    "link": "https://www.omegawatches.com/",
+                    "linkText": "Learn More about Omega Watches",
+                    "seen": "false"
+                }
+            ]  
+        }
+    },
+    "KFC": {
+        "video": "https://www.youtube.com/watch?v=mfIgYdJCwUA",
+        "ad": "KFC",
+        "storyObject": {
+            "id": "order",
+            "photo": "img/fakestagram/kfc_logo.png",
+            "name": "KFC",
+            "seen": false,
+            "items": [
+                {
+                    "id": "pic3",
+                    "type": "photo",
+                    "length": "4",
+                    "src": "img/fakestagram/kfc_AD.jpg",
+                    "link": "https://www.kfc.com",
+                    "linkText": "Get the coupon now!",
+                    "seen": "false"
+                }
+            ]
         }
     }
 }
