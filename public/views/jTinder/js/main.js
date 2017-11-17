@@ -22,7 +22,7 @@ function TinderModel(){
     var self = this;
     self.matches = ko.observableArray();
     for (var i = 0; i < tinderPeople.length; i++){
-        self.matches.push(generateTinderObj(tinderPeople[i].image, tinderPeople[i].caption, tinderPeople[i].link));
+        self.matches.push(generateTinderObj(tinderPeople[i].image, tinderPeople[i].caption));
     }
     $.ajax({url: "/currentAdNoRefresh", 
         success: function (currentAd) {
