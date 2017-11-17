@@ -21,8 +21,26 @@
         <img src="img/refresh.png" onclick="refreshDemo()" style="max-width:30px"></img>
         </h1>
 		<div id="stories"></div>
+        <div style="max-width: 100vh">
+            <hr>
+            <div style="float: left">
+                <div style="background-image: url('img/Roku_Logo.jpg'); background-position: center; padding:20px; background-size: cover; border-radius: 40px; border-style: solid; border-width:1px; border-color: rgba(0,0,0,0.6)"></div>
+            </div>
+            <div style="float: left; text-align: left; foreground-color: blue; padding-left: 8px"> <b> TonyTonyTony </b><br> TonyLand, NYC </div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Sleeping_Beauty_Castle_Disneyland_Anaheim_2013.jpg/1024px-Sleeping_Beauty_Castle_Disneyland_Anaheim_2013.jpg" style="max-width: 100vw; width: 100%"></img>
+            <div style="text-align: left"> At the TonyLand!  This is totally a real place <font color="blue">#blessed</font></div>
+            <hr>
+            <div style="float: left">
+                <div id="adUserProf" style="background-image: url('img/Roku_logo.png'); background-position: center; padding:20px; background-size: cover; border-radius: 40px; border-style: solid; border-width:1px; border-color: rgba(0,0,0,0.6)"></div>
+            </div>
+            <div id="adUserText" style="float: left; text-align: left; foreground-color: blue; padding-left: 8px"> <b> Roku </b><br> Roku Corporate Office </div>
+            <img id="adInlineImg" src="https://tse3.mm.bing.net/th?id=OIP.bm8JX1QMeKY1-femWfJUXgDhEs&pid=15.1" style="max-width: 100vw; min-width: 100%"></img>
+            <div id="learnMore" onclick="visitSponsor()" style="background-color: blue; text-align: left; padding: 2px;display: none"><font color="white">  Learn More  </font></div>
+            <hr>
+        </div>
 
         <script>
+            var sponsorSite = "";
             function buildItem(id, type, length, src, preview, link, linkText, seen, time){
                 return {
                             "id": id,
@@ -120,6 +138,15 @@
                         if (currentAd){
                             console.log(currentAd);
                             stories.update(currentAd.storyObject);
+                            if (currentAd.inlineInstagram){
+                                var inlineAd = currentAd.inlineInstagram;
+                                var user = "<b>" + inlineAd.user + "</b> <br>" + "Sponsored";
+                                document.getElementById("adUserProf").style.backgroundImage = "url(\"" + inlineAd.userProf + "\")";
+                                document.getElementById("adUserText").innerHTML = user;
+                                document.getElementById("adInlineImg").src = inlineAd.image;
+                                document.getElementById("learnMore").style.display="block";
+                                sponsorSite = inlineAd.link;
+                            }
                         }
                     },
                     async: false});
@@ -144,6 +171,9 @@
 			
 			initDemo();
 
+            function visitSponsor(){
+                window.location.href = sponsorSite;
+            }
             function refreshDemo(){
                 location.reload();
             }
