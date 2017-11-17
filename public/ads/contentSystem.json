@@ -115,6 +115,11 @@
                     "seen": "false"
                 }
             ]
-        }
+        },
+            "tinderObject": {
+                "photo": "img/kindling/KFCChickenFlashDrive.png",
+                "caption": "GET YOUR CHICKEN USB",
+                "link": "http://nlab.itmedia.co.jp/nl/articles/1409/04/news118.html"
+            }
     }
 }
