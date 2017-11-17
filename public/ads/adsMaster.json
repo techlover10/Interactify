@@ -6,6 +6,13 @@
         "video": "https://www.youtube.com/watch?v=IeKsweHAREg",
         "timecode": "21"
     },
+    "BNP Paribas Open": {
+        "url": "http://www.bnpparibasopen.com/en/tickets-and-packages/daily-tickets",
+        "image": "img/logos&ads/BNP.jpg",
+        "text": "Swipe down to buy tickets!",
+        "video": "https://www.youtube.com/watch?v=EodKaXZbzWY",
+        "timecode": "7"
+    },
     "little caesars": {
         "url": "https://www.littlecaesarsdelivers.com/menu/little-caesars-nyc-3rd-ave-106th-st",
         "image": "img/logos&ads/littlecaesarsbeahero.jpg",
