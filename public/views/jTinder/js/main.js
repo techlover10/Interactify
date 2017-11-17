@@ -1,7 +1,7 @@
 var tinderPeople = [
      {image: "img/kindling/chris_rock.jpg",
      caption: "Chris Rock"},
-     {image: "img/kindling/moana.jpg",
+     {image: "img/kindling/mona.jpg",
      caption: "Moana"},
      {image: "img/kindling/stockphoto_girl.jpg",
      caption: "Tonya Bae"},
