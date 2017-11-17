@@ -116,10 +116,48 @@
                 }
             ]
         },
-            "tinderObject": {
-                "photo": "img/kindling/KFCChickenFlashDrive.png",
-                "caption": "GET YOUR CHICKEN USB",
-                "link": "http://nlab.itmedia.co.jp/nl/articles/1409/04/news118.html"
+        "tinderObject": {
+            "photo": "img/kindling/KFCChickenFlashDrive.png",
+            "caption": "GET YOUR CHICKEN USB",
+            "link": "http://nlab.itmedia.co.jp/nl/articles/1409/04/news118.html"
+        },
+        "inlineInstagram": {
+            "user": "KFC",
+            "image": "img/kindling/KFCChickenFlashDrive.png",
+            "link": "http://nlab.itmedia.co.jp/nl/articles/1409/04/news118.html",
+            "userProf": "img/fakestagram/kfc_logo.png"
+        }
+    },
+    "Petfood": {
+    "video": "https://www.youtube.com/watch?v=a6KGPBflhiM",
+    "ad": "petfood",
+    "storyObject": {
+        "id": "petfood",
+        "photo": "https://www.orijen.ca/wp-content/themes/orijen/images/ORIJEN-Logo-Share.png",
+        "name": "Orijen",
+        "seen": false,
+        "items": [
+            {
+                "id": "pic5",
+                "type": "photo",
+                "length": "3",
+                "src": "https://images-na.ssl-images-amazon.com/images/I/51AAbcgIDAL.jpg",
+                "link": "https://www.orijen.ca",
+                "linkText": "Give your puppy the best",
+                "seen": "false"
             }
+        ]
+    },
+    "tinderObject": {
+        "photo": "https://herepup.com/wp-content/uploads/2016/12/Orijen-Dog-Food-Line.png",
+        "caption": "Give your puppy the best",
+        "link": "https://www.orijen.ca"
+    },
+    "inlineInstagram": {
+        "user": "Orijen",
+        "image": "http://data.whicdn.com/images/35934482/large.jpg",
+        "link": "https://www.orijen.ca",
+        "userProf": "https://www.orijen.ca/wp-content/themes/orijen/images/ORIJEN-Logo-Share.png"
+    }
     }
 }
