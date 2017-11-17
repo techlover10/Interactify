@@ -5,10 +5,10 @@ var tinderPeople = [
      caption: "caption text"}
 ]
 
-function generateTinderObj(imgsrc, text){
+function generateTinderObj(imgsrc, text, url){
     var wrapFront = "url(\"";
     var wrapBack = "\") no-repeat scroll center center";
-    return {image: {background: wrapFront + imgsrc + wrapBack}, caption: text};
+    return {image: {background: wrapFront + imgsrc + wrapBack}, caption: text, link: url};
 }
 
 function genDefault(){
@@ -18,9 +18,25 @@ function genDefault(){
 function TinderModel(){
     var self = this;
     self.matches = ko.observableArray();
-    for (i = 0; i < tinderPeople.length; i++){
+    for (let i = 0; i < tinderPeople.length-4; i++){
         self.matches.push(generateTinderObj(tinderPeople[i].image, tinderPeople[i].caption));
     }
+    $.ajax({url: "/currentAdNoRefresh", 
+        success: function (currentAd) {
+            console.log("getting current ad");
+            if (currentAd){
+                console.log(currentAd);
+                stories.update(currentAd.storyObject);
+                if (currentAd.tinderObject){
+                    self.matches.push(generateTinderObj(currentAd.tinderObject.photo, currentAd.tinderObject.caption, currentAd.tinderObject.link));
+                }
+            }
+        },
+        async: false});
+    for (let = tinderPeople.length - 4; i < tinderPeople; i++){
+        self.matches.push(generateTinderObj(tinderPeople[i].image, tinderPeople[i].caption));
+    }
+
 }
 var pageModel = new TinderModel();
 ko.applyBindings(pageModel);

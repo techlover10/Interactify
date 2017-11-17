@@ -19,6 +19,11 @@
                 <li>
                     <div class="img" data-bind="style: image"></div>
                     <div data-bind="text: caption"></div>
+                    <!-- ko if: link -->
+                    <div style="width: 70px; height: 30px; text-align: center" data-bind="click: function () {window.location.href = link}">
+                        Learn More
+                    </div>
+                    <!--/ko -->
                     <div class="like"></div>
                     <div class="dislike"></div>
                 </li>
