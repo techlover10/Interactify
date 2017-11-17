@@ -89,5 +89,26 @@
                 }
             ]  
         }
+    },
+    "KFC": {
+        "video": "https://www.youtube.com/watch?v=iAiunAjCz0I",
+        "ad": "KFC",
+        "storyObject": {
+            "id": "order",
+            "photo": "img/fakestagram/kfc_logo.png",
+            "name": "KFC",
+            "seen": false,
+            "items": [
+                {
+                    "id": "pic3",
+                    "type": "photo",
+                    "length": "4",
+                    "src": "img/fakestagram/kfc_AD.jpg",
+                    "link": "https://www.kfc.com",
+                    "linkText": "Get the coupon now!",
+                    "seen": "false"
+                }
+            ]
+        }
     }
 }
