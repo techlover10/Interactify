@@ -1,8 +1,12 @@
 var tinderPeople = [
     {image: "https://tse1.mm.bing.net/th?id=A1005a18fcdfb31abd1df72b79dd474ff&w=137&h=183&c=8&rs=1&qlt=90&dpr=1.3&pid=3.1&rm=2",
      caption: "tree"},
-    {image: "img link",
-     caption: "caption text"}
+     {image: "img/kindling/chris_rock.jpg",
+     caption: "Chris Rock"},
+     {image: "img/kindling/moana.jpg",
+     caption: "Moana"},
+     {image: "img/kindling/stockphoto_girl.jpg",
+     caption: "Tonya Bae"},
 ]
 
 function generateTinderObj(imgsrc, text, url){
