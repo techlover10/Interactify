@@ -139,7 +139,12 @@
                         console.log("getting current ad");
                         if (currentAd){
                             console.log(currentAd);
-                            stories.update(currentAd.storyObject);
+                            if (currentAd.storyObject){
+                                var obj = currentAd.storyObject;
+                                obj.items[0].time = timestamp();
+                                console.log(obj);
+                                stories.update(obj);
+                            }
                             if (currentAd.inlineInstagram){
                                 var inlineAd = currentAd.inlineInstagram;
                                 var user = "<b>" + inlineAd.user + "</b> <br>" + "Sponsored";
