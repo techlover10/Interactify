@@ -84,7 +84,7 @@
 
 			switch (ev.type) {
 				case 'touchstart':
-					if(touchStart === false) {
+					if(touchStart === false && ev.target.className != "clickable") {
 						touchStart = true;
 						xStart = ev.originalEvent.touches[0].pageX;
 						yStart = ev.originalEvent.touches[0].pageY;
@@ -124,6 +124,9 @@
 					break;
 				case 'mouseup':
 				case 'touchend':
+                    if (ev.target.className == "clickable"){
+                        ev.target.click();
+                    }
 					touchStart = false;
 					var pageX = (typeof ev.pageX == 'undefined') ? ev.originalEvent.changedTouches[0].pageX : ev.pageX;
 					var pageY = (typeof ev.pageY == 'undefined') ? ev.originalEvent.changedTouches[0].pageY : ev.pageY;
