@@ -42,7 +42,6 @@ function TinderModel(){
             console.log("getting current ad");
             if (currentAd){
                 console.log(currentAd);
-                stories.update(currentAd.storyObject);
                 if (currentAd.tinderObject){
                     self.matches.push(generateTinderObj(currentAd.tinderObject.photo, currentAd.tinderObject.caption, currentAd.tinderObject.link));
                 }
