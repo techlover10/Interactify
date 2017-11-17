@@ -1,3 +1,4 @@
+var cardIdx = 6;
 var tinderPeople = [
      {image: "img/kindling/chris_rock.jpg",
      caption: "Chris Rock"},
@@ -34,7 +35,7 @@ function genDefault(){
 function TinderModel(){
     var self = this;
     self.matches = ko.observableArray();
-    for (var i = 0; i < tinderPeople.length; i++){
+    for (var i = 0; i < cardIdx; i++){
         self.matches.push(generateTinderObj(tinderPeople[i].image, tinderPeople[i].caption));
     }
     $.ajax({url: "/currentAdNoRefresh", 
@@ -48,6 +49,9 @@ function TinderModel(){
             }
         },
         async: false});
+    for (var i = cardIdx; i < tinderPeople.length; i++){
+        self.matches.push(generateTinderObj(tinderPeople[i].image, tinderPeople[i].caption));
+    }
 
 }
 var pageModel = new TinderModel();
@@ -62,12 +66,12 @@ function activateSliders(){
         // dislike callback
         onDislike: function (item) {
             // set the status text
-            $('#status').html('Liked!');
+            $('#status').html('Disliked!');
         },
         // like callback
         onLike: function (item) {
             // set the status text
-            $('#status').html('Disliked!');
+            $('#status').html('Liked!');
         },
         animationRevertSpeed: 200,
         animationSpeed: 400,
