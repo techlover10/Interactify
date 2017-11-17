@@ -1,4 +1,26 @@
 {
+    "Narcos Season3": {
+        "video": "https://www.youtube.com/watch?v=j73-IvTvNN0",
+        "ad": "Juul",
+        "storyObject": {
+            "id": "ad",
+            "photo": "img/fakestagram/Juul.png",
+            "name": "Juul",
+            "seen": false,
+            "items": [
+                {
+                    "id": "pic3",
+                    "type": "photo",
+                    "length": "4",
+                    "src": "img/fakestagram/SmokingJuul.jpg",
+                    "link": "https://www.juulvapor.com/shop-juul",
+                    "linkText": "Wanna feel Narcos without being Narcos?",
+                    "seen": "true"
+                }
+            ]
+        }
+    },
+
     "$1 dog vs $10k dog": {
         "video": "https://www.youtube.com/watch?v=ketCUtFpzNo",
         "ad": "rick and morty",
@@ -19,6 +41,7 @@
                 }
             ]
         },
+
         "tinderObject": {
             "photo": "<SRC LINK>",
             "caption": "<Caption Text>",
