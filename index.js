@@ -52,6 +52,10 @@ router.get("/v2tv",function(req,res){
   res.render("v2tv");
 });
 
+router.get("/kindling", function(rq, res){
+    res.render("jTinder/index.html");
+});
+
 router.get("/remote",function(req,res){
   res.render("remote");
 });
