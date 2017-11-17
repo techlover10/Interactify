@@ -4,6 +4,7 @@ var tinderPeople = [
      {image: "img/kindling/mona.jpg",
      caption: "Moana"},
      {image: "img/kindling/stockphoto_girl.jpg",
+         link: "test",
      caption: "Tonya Bae"},
 ]
 
@@ -21,7 +22,7 @@ function TinderModel(){
     var self = this;
     self.matches = ko.observableArray();
     for (var i = 0; i < tinderPeople.length; i++){
-        self.matches.push(generateTinderObj(tinderPeople[i].image, tinderPeople[i].caption));
+        self.matches.push(generateTinderObj(tinderPeople[i].image, tinderPeople[i].caption, tinderPeople[i].link));
     }
     $.ajax({url: "/currentAdNoRefresh", 
         success: function (currentAd) {

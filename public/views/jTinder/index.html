@@ -18,9 +18,9 @@
                 <!-- ko foreach: matches -->
                 <li>
                     <div class="img" data-bind="style: image"></div>
-                    <div data-bind="text: caption"></div>
+                    <div data-bind="text: caption" style="width: 50%; margin: auto; float: left; padding: 4px"></div>
                     <!-- ko if: link -->
-                    <div style="width: 70px; height: 30px; text-align: center" data-bind="click: function () {window.location.href = link}">
+                    <div style="padding: 4px; background-color: rgba(0,120,20,0.4); border-radius: 8px; height: 25px; text-align: center; float: left" data-bind="click: function () {window.location.href = link}">
                         Learn More
                     </div>
                     <!--/ko -->
