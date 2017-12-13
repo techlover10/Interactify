@@ -1,4 +1,4 @@
-# Roku Interactive Advertising Framework 
+# Interactify: Interactive Advertising Framework 
 
 # Installation and Usage
 
